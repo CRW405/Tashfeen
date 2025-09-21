@@ -1,0 +1,1076 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=latex 2025.9.6)  7 SEP 2025 15:37
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**datahw1.tex
+(./datahw1.tex
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-08-13>
+(./homework.cls
+Document Class: homework 2024/01/01 Homework
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amscls/amsart.cls
+Document Class: amsart 2020/05/29 v2.20.6
+\linespacing=\dimen148
+\normalparindent=\dimen149
+\normaltopskip=\skip49
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/06/16 v2.17y AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen150
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen151
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count275
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count276
+\leftroot@=\count277
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count278
+\DOTSCASE@=\count279
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen152
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count280
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count281
+\dotsspace@=\muskip17
+\c@parentequation=\count282
+\dspbrk@lvl=\count283
+\tag@help=\toks18
+\row@=\count284
+\column@=\count285
+\maxfields@=\count286
+\andhelp@=\toks19
+\eqnshift@=\dimen153
+\alignsep@=\dimen154
+\tagshift@=\dimen155
+\tagwidth@=\dimen156
+\totwidth@=\dimen157
+\lineht@=\dimen158
+\@envbody=\toks20
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2949.
+LaTeX Info: Redefining \] on input line 2950.
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 397
+.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+\copyins=\insert252
+\abstractbox=\box55
+\listisep=\skip53
+\c@part=\count287
+\c@section=\count288
+\c@subsection=\count289
+\c@subsubsection=\count290
+\c@paragraph=\count291
+\c@subparagraph=\count292
+\c@figure=\count293
+\c@table=\count294
+\abovecaptionskip=\skip54
+\belowcaptionskip=\skip55
+\captionindent=\dimen159
+\thm@style=\toks22
+\thm@bodyfont=\toks23
+\thm@headfont=\toks24
+\thm@notefont=\toks25
+\thm@headpunct=\toks26
+\thm@preskip=\skip56
+\thm@postskip=\skip57
+\thm@headsep=\skip58
+\dth@everypar=\toks27
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks28
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count295
+\Gm@cntv=\count296
+\c@Gm@tempcnt=\count297
+\Gm@bindingoffset=\dimen160
+\Gm@wd@mp=\dimen161
+\Gm@odd@mp=\dimen162
+\Gm@even@mp=\dimen163
+\Gm@layoutwidth=\dimen164
+\Gm@layoutheight=\dimen165
+\Gm@layouthoffset=\dimen166
+\Gm@layoutvoffset=\dimen167
+\Gm@dimlist=\toks29
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip59
+\enit@outerparindent=\dimen168
+\enit@toks=\toks30
+\enit@inbox=\box56
+\enit@count@id=\count298
+\enitdp@description=\count299
+)
+(./hwsymb.sty
+Package: hwsymb 2024/01/01 hwsymb
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amscd.sty
+Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
+\athelp@=\toks31
+\minaw@=\dimen169
+\bigaw@=\dimen170
+\minCDarrowwidth=\dimen171
+)
+LaTeX Info: Redefining \sc on input line 9.
+) (./hwlst.sty
+Package: hwlst 2024/01/01 hwlst
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count300
+\lst@gtempboxa=\box57
+\lst@token=\toks32
+\lst@length=\count301
+\lst@currlwidth=\dimen172
+\lst@column=\count302
+\lst@pos=\count303
+\lst@lostspace=\dimen173
+\lst@width=\dimen174
+\lst@newlines=\count304
+\lst@lineno=\count305
+\lst@maxwidth=\dimen175
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+\c@lstnumber=\count306
+\lst@skipnumbers=\count307
+\lst@framebox=\box58
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2024/09/23 1.10c listings configuration
+))
+Package: listings 2024/09/23 1.10c (Carsten Heinz)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: dvips.def on input line 274.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2022/09/22 v3.1e Graphics/color driver for dvips
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/accsupp/accsupp.sty
+Package: accsupp 2019/12/05 v0.6 Accessibility support by marked content (HO)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/accsupp/accsupp-dvips.def
+File: accsupp-dvips.def 2019/12/05 v0.6 accsupp driver for dvips (HO)
+)))
+(./hwcmd.sty
+Package: hwcmd 2024/01/01 hwcmd
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvips.def on input line 106.
+)
+\Gin@req@height=\dimen176
+\Gin@req@width=\dimen177
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2025/03/13 v1.3e reserve vertical space
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count308
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count309
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen178
+\Hy@linkcounter=\count310
+\Hy@pagecounter=\count311
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count312
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4195.
+Package hyperref Info: Link nesting OFF on input line 4200.
+Package hyperref Info: Hyper index ON on input line 4203.
+Package hyperref Info: Plain pages OFF on input line 4210.
+Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4462.
+\c@Hy@tempcnt=\count313
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4801.
+\XeTeXLinkMargin=\dimen179
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count314
+\Field@Width=\dimen180
+\Fld@charsize=\dimen181
+Package hyperref Info: Hyper figures OFF on input line 6078.
+Package hyperref Info: Link nesting OFF on input line 6083.
+Package hyperref Info: Hyper index ON on input line 6086.
+Package hyperref Info: backreferencing OFF on input line 6093.
+Package hyperref Info: Link coloring OFF on input line 6098.
+Package hyperref Info: Link coloring with OCG OFF on input line 6103.
+Package hyperref Info: PDF/A mode OFF on input line 6108.
+\Hy@abspage=\count315
+\c@Item=\count316
+\c@Hfootnote=\count317
+)
+Package hyperref Info: Driver (default): hdvips.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hdvips.def
+File: hdvips.def 2025-07-12 v7.01o Hyperref driver for dvips
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pdfmark.def
+File: pdfmark.def 2025-07-12 v7.01o Hyperref definitions for pdfmark specials
+\pdf@docset=\toks33
+\pdf@box=\box59
+\pdf@toks=\toks34
+\pdf@defaulttoks=\toks35
+\HyField@AnnotCount=\count318
+\Fld@listcount=\count319
+\c@bookmark@seq@number=\count320
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+)
+\Hy@SectionHShift=\skip60
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks36
+\pgfutil@tempdima=\dimen182
+\pgfutil@tempdimb=\dimen183
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box60
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks37
+\pgfkeys@temptoks=\toks38
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex
+\pgfkeys@tmptoks=\toks39
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
+\pgf@x=\dimen184
+\pgf@xa=\dimen185
+\pgf@xb=\dimen186
+\pgf@xc=\dimen187
+\pgf@y=\dimen188
+\pgf@ya=\dimen189
+\pgf@yb=\dimen190
+\pgf@yc=\dimen191
+\c@pgf@counta=\count321
+\c@pgf@countb=\count322
+\c@pgf@countc=\count323
+\c@pgf@countd=\count324
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen192
+\pgfmath@count=\count325
+\pgfmath@box=\box61
+\pgfmath@toks=\toks40
+\pgfmath@stack@operand=\toks41
+\pgfmath@stack@operation=\toks42
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count326
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen193
+\pgffor@skip=\dimen194
+\pgffor@stack=\toks43
+\pgffor@toks=\toks44
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen195
+\captionmargin=\dimen196
+\caption@leftmargin=\dimen197
+\caption@rightmargin=\dimen198
+\caption@width=\dimen199
+\caption@indent=\dimen256
+\caption@parindent=\dimen257
+\caption@hangindent=\dimen258
+Package caption Info: AMS or SMF document class detected.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption-ams-smf.sto
+File: caption-ams-smf.sto 2020/08/22 v2.0 Adaption of the caption package to th
+e AMS and SMF document classes (AR)
+))
+\c@KVtest=\count327
+\sf@farskip=\skip61
+\sf@captopadj=\dimen259
+\sf@capskip=\skip62
+\sf@nearskip=\skip63
+\c@subfigure=\count328
+\c@subfigure@save=\count329
+\c@lofdepth=\count330
+\c@subtable=\count331
+\c@subtable@save=\count332
+\c@lotdepth=\count333
+\sf@top=\skip64
+\sf@bottom=\skip65
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+\c@caption@flags=\count334
+\c@continuedfloat=\count335
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+)
+\unitskipamount=\skip66
+\c@UnitCounter=\count336
+\l__scribe_tbl_cols_int=\count337
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 31.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+6.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/libertine/libertine.sty
+Package: libertine 2024/04/23 (Bob Tennent) Supports Libertine and Biolinum fon
+ts for all LaTeX engines.
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks45
+\XKV@tempa@toks=\toks46
+)
+\XKV@depth=\count338
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontaxes/fontaxes.sty
+Package: fontaxes 2025-05-24 v2.0.1 Font selection axes (deprecated)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/figureversions/figureversions.sty
+Package: figureversions 2025-04-29 v1.0.1 Figure versions
+))
+LaTeX Info: Redefining \oldstylenums on input line 485.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/libertine/LinLibertine_I.tex)) (
+/usr/local/texlive/2025/texmf-dist/tex/latex/inconsolata/zi4.sty
+Package: zi4 2019/05/17 v1.12
+
+`inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe)
+\zifour@ocount=\count339
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/newtx/newtxmath.sty
+Package: newtxmath 2024/09/22 v1.754
+
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/oberdiek/centernot.sty
+Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
+)
+\tx@cntz=\count340
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/kastrup/binhex.tex)
+\tx@Isdigit=\count341
+\tx@IsAlNum=\count342
+\tx@tA=\toks47
+\tx@tB=\toks48
+\tx@su=\read2
+
+amsthm NOT loaded
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 402.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/lmr/m/n --> OT1/LinuxLibertineT-TLF/m/n on input li
+ne 402.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/lmr/bx/n --> OT1/LinuxLibertineT-TLF/m/n on input l
+ine 402.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/LinuxLibertineT-TLF/m/n --> OT1/LinuxLibertineT-TLF
+/sb/n on input line 403.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 410.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/lmss/m/n --> OT1/LinuxBiolinumT-TLF/m/n on input li
+ne 410.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/lmss/bx/n --> OT1/LinuxBiolinumT-TLF/m/n on input l
+ine 410.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/LinuxBiolinumT-TLF/m/n --> OT1/LinuxBiolinumT-TLF/b
+/n on input line 412.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 419.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/lmr/m/it --> OT1/LinuxLibertineT-TLF/m/it on input 
+line 419.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/lmr/bx/it --> OT1/LinuxLibertineT-TLF/m/it on input
+ line 419.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 420.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/lmtt/m/n --> T1/zi4/m/n on input line 420.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/lmtt/m/n --> T1/zi4/m/n on input line 420.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 422.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/lmr/bx/n --> OT1/LinuxLibertineT-TLF/sb/n on input 
+line 422.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/lmr/bx/n --> OT1/LinuxLibertineT-TLF/sb/n on input 
+line 422.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/LinuxLibertineT-TLF/m/it --> OT1/LinuxLibertineT-TL
+F/sb/it on input line 423.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  T1/zi4/m/n --> T1/zi4/b/n on input line 426.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 444.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/lmm/m/it --> OML/nxlmi/m/it on input line 444.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/lmm/b/it --> OML/nxlmi/m/it on input line 444.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/nxlmi/m/it --> OML/nxlmi/b/it on input line 445.
+\symlettersA=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
+(Font)                  U/ntxmia/m/it --> U/ntxmia/b/it on input line 582.
+LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 584.
+Now handling font encoding LMS ...
+... no UTF-8 mapping file for font encoding LMS
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 604.
+LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 604.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/lmsy/m/n --> LMS/ntxsy/m/n on input line 604.
+LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 604.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/lmsy/b/n --> LMS/ntxsy/m/n on input line 604.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  LMS/ntxsy/m/n --> LMS/ntxsy/b/n on input line 605.
+\symAMSm=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `AMSm' in version `bold'
+(Font)                  U/ntxsym/m/n --> U/ntxsym/b/n on input line 630.
+\symsymbolsC=\mathgroup8
+LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
+(Font)                  U/ntxsyc/m/n --> U/ntxsyc/b/n on input line 651.
+Now handling font encoding LMX ...
+... no UTF-8 mapping file for font encoding LMX
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 664.
+LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 6
+64.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/lmex/m/n --> LMX/ntxexx/m/n on input line 664.
+LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 664
+.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/lmex/m/n --> LMX/ntxexx/m/n on input line 664.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  LMX/ntxexx/m/n --> LMX/ntxexx/b/n on input line 665.
+\symlargesymbolsTXA=\mathgroup9
+LaTeX Font Info:    Overwriting symbol font `largesymbolsTXA' in version `bold'
+
+(Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 679.
+\tx@sbptoks=\toks49
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 902.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 903.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 904.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 905.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 910.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 911.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 913.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 915.
+LaTeX Font Info:    Redeclaring math delimiter \arrowvert on input line 919.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 920.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 991.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 992.
+LaTeX Font Info:    Redeclaring math accent \vec on input line 2057.
+LaTeX Info: Redefining \Bbbk on input line 2847.
+LaTeX Info: Redefining \not on input line 2995.
+LaTeX Info: Redefining \textsquare on input line 3025.
+LaTeX Info: Redefining \openbox on input line 3027.
+)
+LaTeX Font Info:    Trying to load font information for T1+LinuxLibertineT-TLF 
+on input line 21.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/libertine/T1LinuxLibertineT-TLF.f
+d
+File: T1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Li
+nuxLibertineT-TLF.
+)
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 21.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2025-06-09 L3 backend support: dvips
+\l__pdfannot_backend_content_box=\box62
+\l__pdfannot_backend_model_box=\box63
+\g__pdfannot_backend_int=\count343
+\g__pdfannot_backend_link_int=\count344
+\g__pdfannot_backend_link_sf_int=\count345
+) (./datahw1.aux)
+\openout1 = `datahw1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 21.
+LaTeX Font Info:    Trying to load font information for OML+nxlmi on input line
+ 21.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/newtx/omlnxlmi.fd
+File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
+)
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 21.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
+21.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/newtx/untxexa.fd
+File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
+)
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 21.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
+ 21.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/newtx/lmsntxsy.fd
+File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
+)
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 21.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
+e 21.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/newtx/lmxntxexx.fd
+File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
+)
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 21.
+LaTeX Font Info:    Trying to load font information for OT1+LinuxLibertineT-TLF
+ on input line 21.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/libertine/OT1LinuxLibertineT-TLF.
+fd
+File: OT1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for OT1/
+LinuxLibertineT-TLF.
+)
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 21.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 7.3pt on input line 21.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 5.5pt on input line 21.
+LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
+(Font)              scaled to size 10.0pt on input line 21.
+LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
+(Font)              scaled to size 7.3pt on input line 21.
+LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
+(Font)              scaled to size 5.5pt on input line 21.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 10.0pt on input line 21.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 7.3pt on input line 21.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 5.5pt on input line 21.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 10.0pt on input line 21.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 7.3pt on input line 21.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 5.5pt on input line 21.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
+
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
+
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
+21.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/newtx/untxmia.fd
+File: untxmia.fd 2024/04/09 Fontinst v1.933 font definitions for U/ntxmia.
+)
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 10.0pt on input line 21.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 7.3pt on input line 21.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 5.5pt on input line 21.
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
+21.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/newtx/untxsym.fd
+File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
+)
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 10.0pt on input line 21.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 7.3pt on input line 21.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 5.5pt on input line 21.
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
+21.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/newtx/untxsyc.fd
+File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
+)
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 10.0pt on input line 21.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 7.3pt on input line 21.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 5.5pt on input line 21.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 10.0pt on input line 21.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 7.3pt on input line 21.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 5.5pt on input line 21.
+LaTeX Info: Command `\dddot' is already robust on input line 21.
+LaTeX Info: Command `\ddddot' is already robust on input line 21.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: dvips
+*geometry* verbose mode - [ preamble ] result:
+* driver: dvips
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(36.135pt, 542.02501pt, 36.135pt)
+* v-part:(T,H,B)=(36.135pt, 722.7pt, 36.135pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=542.02501pt
+* \textheight=722.7pt
+* \oddsidemargin=-36.135pt
+* \evensidemargin=-36.135pt
+* \topmargin=-58.135pt
+* \headheight=8.0pt
+* \headsep=14.0pt
+* \topskip=10.0pt
+* \footskip=12.0pt
+* \marginparwidth=90.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=7.0pt plus 11.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\c@lstlisting=\count346
+Package hyperref Info: Link coloring ON on input line 21.
+(./datahw1.out) (./datahw1.out)
+\@outlinefile=\write3
+\openout3 = `datahw1.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@mv@tabular=\count347
+\c@mv@boldtabular=\count348
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 12.0pt on input line 21.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 48.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 8.8pt on input line 48.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 6.6pt on input line 48.
+LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
+(Font)              scaled to size 12.0pt on input line 48.
+LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
+(Font)              scaled to size 8.8pt on input line 48.
+LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
+(Font)              scaled to size 6.6pt on input line 48.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 12.0pt on input line 48.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 8.8pt on input line 48.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 6.6pt on input line 48.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 12.0pt on input line 48.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 8.8pt on input line 48.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 6.6pt on input line 48.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 12.0pt on input line 48.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 8.8pt on input line 48.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 6.6pt on input line 48.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 12.0pt on input line 48.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 8.8pt on input line 48.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 6.6pt on input line 48.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 12.0pt on input line 48.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 8.8pt on input line 48.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 6.6pt on input line 48.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 12.0pt on input line 48.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 8.8pt on input line 48.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 6.6pt on input line 48.
+
+
+LaTeX Warning: Reference `types' on page 1 undefined on input line 77.
+
+
+
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 96.
+[1]
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 11
+1.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/inconsolata/t1zi4.fd
+File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 12.0pt on input line 111.
+
+
+LaTeX Warning: Reference `exmp' on page 2 undefined on input line 119.
+
+
+LaTeX Warning: Reference `fib' on page 2 undefined on input line 122.
+
+
+LaTeX Warning: Reference `fib' on page 2 undefined on input line 123.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+)
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 10.0pt on input line 159.
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 8.0pt on input line 160.
+LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
+(Font)              scaled to size 10.0pt on input line 160.
+
+
+LaTeX Warning: Reference `byte' on page 2 undefined on input line 185.
+
+
+LaTeX Warning: Reference `byte' on page 2 undefined on input line 194.
+
+
+LaTeX Warning: Reference `long' on page 2 undefined on input line 197.
+
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 8.8pt on input line 208.
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 6.6pt on input line 208.
+
+
+[2]
+
+LaTeX Warning: Reference `primality' on page 3 undefined on input line 261.
+
+
+
+[3]
+
+LaTeX Warning: Reference `cipher' on page 4 undefined on input line 288.
+
+
+LaTeX Warning: Reference `cipher' on page 4 undefined on input line 294.
+
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 12.0pt on input line 295.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
+(Font)              scaled to size 12.0pt on input line 352.
+
+LaTeX Warning: Reference `exmp' on page 4 undefined on input line 354.
+
+
+LaTeX Warning: Reference `exmp' on page 4 undefined on input line 386.
+
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
+(Font)              scaled to size 10.0pt on input line 398.
+
+
+[4] (./datahw1.aux)
+ ***********
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-08-13>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `datahw1.out' has not changed.
+(rerunfilecheck)             Checksum: 5FA5AAD4B616332C98844A1F34847AA0;1381.
+ ) 
+Here is how much of TeX's memory you used:
+ 23374 strings out of 467801
+ 387192 string characters out of 5431915
+ 948543 words of memory out of 5000000
+ 51511 multiletter control sequences out of 15000+600000
+ 693339 words of font info for 115 fonts, out of 8000000 for 9000
+ 1302 hyphenation exceptions out of 8191
+ 99i,6n,107p,607b,1484s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on datahw1.dvi (4 pages, 29104 bytes).

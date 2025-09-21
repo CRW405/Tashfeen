@@ -1,0 +1,275 @@
+\documentclass{homework}
+\author{Wiyninger, Caleb}
+\class{CSCI 2114: Tashfeen's Data Structures}
+\date{\today}
+\title{Homework 2}
+\address{%
+  Oklahoma City University, %
+  Petree College of Arts \& Sciences, %
+  Computer Science%
+}
+
+\acmfonts
+
+\begin{document} \maketitle
+
+Let's remind ourselves of the asymptotic order
+notation\footnote{Sometimes also referred to as the
+  \href{https://en.wikipedia.org/wiki/Big_O_notation}{Bachmann-Landau
+    notation}.}. Let $f(x)$ and $g(x)$ be functions of a positive $x$.
+\[
+  f(x) = \O(g(x))
+\]
+when there is positive constant $c$ such that,
+\[
+  f(x) \leq cg(x)
+\]
+for all $x \geq n$. Function $f$ is then stated as \textit{big oh}
+of $g$. Similarly, $f$ is \textit{big omega} of $g$ \ie
+\[
+  f(x) = \Omega(g(x))
+\]
+when there exist positive constants $c, n$ such that for all $x
+  \geq n$ we have,
+\[
+  f(x) \geq cg(x)
+\]
+Lastly, if $f$ is both big-$\O$ and big-$\Omega$ of $g$,
+\[
+  \Omega(g(x)) = f(x) = \O(g(x))
+\]
+Then such a tight bound is stated as $f$ is big-$\Theta$ of $g$,
+\[
+  f(x) = \Theta(g(x))
+\]
+
+\question Consider the following Java subroutine,
+\begin{lstlisting}[language=java]
+public static void conditionalWork(int n) {
+    for (int i = 0; i < n; i++)
+        if (Math.random() < 0.5)
+            taskA()
+        else
+            taskB()
+}
+\end{lstlisting}
+\begin{enumerate}
+  \item If on a certain machine the function \texttt{taskA()} takes 2
+        seconds on each call in the loop and the function \texttt{taskB()}
+        takes 4 seconds then for $n=10$, what is the total number of
+        \textit{expected} seconds taken by the subroutine \texttt{public
+          static void conditionalWork(int n)}?
+
+        % solution goes here
+
+  \item The subroutine \texttt{conditionalWork(int n)} is ran on a much
+        faster machine reducing the time taken by \texttt{taskA()} on each
+        call down to $\frac{1}{25}^\text{th}$ of a second and
+        \texttt{taskB()} now takes $\frac{1}{5}^\text{th}$ of a second.
+        For ${n=10}$, what is the new total number of seconds
+        \textit{expected} by the subroutine \texttt{conditionalWork(int
+          n)}?
+
+        % solution goes here
+
+  \item Assume that for any arbitrary $n$, \texttt{taskA()} takes
+        $\log(n)$ steps while \texttt{taskB()} takes $2n^2$ steps. Let
+        $T(n)$ be the total number of steps \textit{expected} by
+        \texttt{conditionalWork(int n)}, what is $T(n)$?
+
+        % solution goes here
+
+  \item What is the \textit{best expected asymptotic} runtime complexity
+        written as $T(n) = \Omega(g(n))$?
+
+        % solution goes here
+
+  \item What is the \textit{worst expected asymptotic} runtime complexity
+        written as $T(n) = \O(g(n))$?
+
+        % solution goes here
+
+  \item If \texttt{taskB()} took $4\log(n)$ steps, what is the
+        \textit{tight expected asymptotic} runtime complexity written as
+        $T(n) = \Theta(g(n))$?
+
+        % solution goes here
+\end{enumerate}
+
+\begin{sol}
+  1 - 30s \smallbreak
+  2 - 1.2s \smallbreak
+  3 - $T(n) = n/2(log(n)) + n/2(2n^2) = nlogn/2 + n^3$ \smallbreak
+  4 - $T(n) = \Omega(g(n)) = nlogn/2$ \smallbreak
+  5 - $T(n) = O(g(n)) = n^3$ \smallbreak
+  6 - $T(n) = \Theta(g(n)) = nlogn$
+\end{sol}
+
+\question In the code snippet bellow, we see two ways of getting the tenth
+place digit of a Java \texttt{int} $n$. Give the runtime
+complexity of each method using the \textit{big oh} notation.
+Justify your answer.
+\begin{lstlisting}[language=java]
+System.out.println(n % 10);
+System.out.println(String.valueOf(n).charAt(String.valueOf(n).length() - 1));
+/*
+String.valueOf(n) // loops through and converts
+.charAt( // accesses char at index
+  String.valueOf(n) // loops through and converts
+  .length() -1 
+)
+*/
+\end{lstlisting}
+
+
+\begin{sol}
+  $O(1)$ - always 1 step \smallbreak
+  $O(n)$ - loop for n
+\end{sol}
+
+\question Consider the following functions,
+\begin{align*}
+  a(x)      & = 2(x^3+1)(x^2-1)+2 \\
+  b(x)      & = 2x^2              \\
+  \alpha(x) & = x^2               \\
+  \beta(x)  & = \pi x^2
+\end{align*}
+\begin{enumerate}
+  \item Observe that $b(x) = \O(a(x))$ because $b(x) \leq a(x)$ past a
+        certain $x=n$. What is the value of $n$ in this case?
+
+        % solution goes here
+
+  \item Observe that $\beta(x) = \O(\alpha(x))$ because there exists a $c$
+        such that $\beta(x) \leq c\alpha(x)$ for all $x > 0$. What is the
+        value of $c$ in this case?
+
+        % solution goes here
+
+\end{enumerate}
+
+\begin{sol}
+  // $a(x)=2x^{5} - 2x^{3} + 2x^{2}$ \smallbreak
+  1 - 1 \smallbreak
+  2 - $\pi$
+\end{sol}
+
+\question Given in listing \\ref{sort} is a Java subroutine that sorts an
+array of non-negative Java integers in ascending order.
+
+\begin{lstlisting}[language=java]
+public static void sortIntegers (int[] toSort) {
+    int i = 0, j = 0, k = 0, max = Integer.MIN_VALUE;
+    for (i = 0; i < toSort.length; i ++) // O(n)
+        max = toSort[i] > max ? toSort [i] : max;
+    int[] counts = new int[max + 1];
+    for (i = 0; i < toSort.length; i ++) // O(n)
+        counts[toSort[i]]++;
+    for (i = 0; i < counts.length; i++) // O(n) because the inner loop runs (int) counts[i] so its considered a constant
+        for (j = 0; j < counts[i]; j++)
+            toSort[k++] = i;
+}
+
+/*
+  arr = 9, 6, 7, 3, 5, 2, 1
+  counts.length = arr.length+1
+  i 0
+  j 0
+  k 0
+  max = -inf
+
+  // 1st step
+  for i in arr
+    if i > max  
+      max = i
+  // set max to largest number in arr, (9)
+
+
+  // 3rd step
+  for i in arr
+    counts[arr[i]+1] 
+  // stores how many of each number is in arr, 
+  // if there are two nines, then counts[9] = 2
+
+  // 4th step
+  for i in counts // for each el in counts[]
+    for j in i // for number i
+      k + 1 // increment k
+      arr[k] = i // arr at k = 1
+  // for every number in counts, 
+  // add the index as many times as the element to arr, k is the index
+
+  // if there are two ones and one 3, 
+  then arr[0] = 1, arr[1] = 1, and arr[2] = 3
+    */
+\end{lstlisting}
+
+Assume that the length of the input parameter \texttt{int[]
+  toSort} is $n + 1$, the ${\max(\texttt{toSort}) \leq n}$ and that
+\texttt{toSort} has unique elements. Let $T(n)$ be the worst and
+the average case complexity of the algorithm's runtime and
+$S(\texttt{toSort})$ be the worst case complexity of the
+memory-space.
+
+\begin{enumerate}
+  \item What is $T(n)$?
+
+        % solution goes here
+        \begin{sol}
+          3n
+        \end{sol}
+
+  \item What are $\O(T(n)), \O(S(\texttt{toSort}))$?
+
+        % solution goes here
+        \begin{sol}
+          O(n) \\
+          O(n)
+        \end{sol}
+
+  \item Look up and state the \textit{big}-$\O$ of the average case
+        complexity of Java's built-in
+        \href{https://tinyurl.com/jw75mfa}{\texttt{Arrays.sort(int[])}}.
+        Is this better than $\O(T(n))$ from the previous step of this question?
+
+        % solution goes here
+        \begin{sol}
+          Arrays.sort(int[]) = O(nlogn) \\
+          O(n) is less complex then O(nlogn)
+        \end{sol}
+\end{enumerate}
+
+\question Given bellow is the Java implementation of the sieve of
+Eratosthenes. This particular implementation marks all the
+composite numbers as \texttt{true} since Java allocates
+\texttt{false} to all the elements of a newly created boolean
+arrays.
+\begin{lstlisting}[language=java]
+public static void eratosthenes(boolean[] toSieve) {
+    toSieve[0] = true;
+    toSieve[1] = true;
+    for (int i = 2; i < Math.sqrt(toSieve.length); i++) // O(sqrt(n))
+        if (!toSieve[i])
+            for (int j = i*i; j < toSieve.length; j += i)
+                toSieve[j] = true;
+}
+
+/*
+ for i in n // O(sqrt(n))
+    for i*i in n // O(n) 
+*/
+\end{lstlisting}
+Give an upper-bound on the runtime complexity of this particular
+implementation of the sieve of Eratosthenes. The better
+upper-bound you give, the more credit you get. Justify your
+answer.
+
+\begin{sol} 
+  $O(n\sqrt{n})$ since the outer loop cannot run more than the $\sqrt{n} * n$
+\end{sol}
+
+% solution goes here
+\section*{Submission Instructions}
+Submit a PDF file with your answers.
+\end{document}
+

@@ -1,0 +1,199 @@
+\documentclass{homework}
+\author{Wiyninger, Caleb}  % Uncomment with your name
+\class{MATH 3503: Tashfeen's Discrete Mathematics}
+\date{\today}  % Uncomment with your semester
+\title{Homework 2}
+\address{
+  Computer Science, %
+  Petree College of Arts \& Sciences, %
+  Oklahoma City University
+}
+
+\begin{document} \maketitle
+
+\question Please read chapter 2 of Chartrand et al. and write a couple sentences about a topic/example/concept that you found difficult or interesting and why?
+
+\begin{sol}
+    I like how the book put the concepts of the different types of number in terms of sets such as $\N \subset \Z$. This made some concepts easier to understand.
+\end{sol}
+
+\question How many elements are in $\mathcal{P}(A)$ if $A = \{n \in \Z: |n| \leq 5\}$?
+
+\begin{sol}
+11 integers \smallbreak
+$2^{11}$ elements
+\end{sol}
+
+\question Let $A = \{0, \{0\}, \{0, \{0\}\}\}$.
+\begin{enumerate}[label=(\alph*)]
+    \item Determine which of the following are elements of $A: 0, \{0\}, \{\{0\}\}$.
+
+    % solution goes here
+    \begin{sol}
+        0, \{0\}
+    \end{sol}
+
+    \item Determine $|A|$
+
+    % solution goes here
+    \begin{sol}
+    3
+    \end{sol}
+    
+    \item Determine which of the followin+g are subsets of $A: 0, \{0\}, \{\{0\}\}$.
+
+    % solution goes here
+    \begin{sol}
+    \{0\}, \{\{0\}\}
+    \end{sol}
+    
+    For (d)-(i), determine the indicated sets.
+    \item $\{0\} \cap A$.
+
+    % solution goes here
+    \begin{sol}
+    \{0\}
+    \end{sol}
+    
+    \item $\{\{0\}\} \cap A$.
+
+    % solution goes here
+    \begin{sol}
+    \{\{0\}\}
+    \end{sol}
+    
+    \item $\{\{\{0\}\}\} \cap A$.
+
+    % solution goes here
+    \begin{sol}
+        empty
+    \end{sol}
+    
+    \item $\{0\} \cup A$.
+
+    % solution goes here
+    \begin{sol}
+        \{0, \{0\}, \{0, \{0\}\}\}
+    \end{sol}
+    
+    \item $\{\{0\}\} \cup A$.
+
+    % solution goes here
+    \begin{sol}
+    \{0, \{0\}, \{0, \{0\}\}\}
+    \end{sol}
+    
+    \item $\{\{\{0\}\}\} \cup A$.
+
+    % solution goes here
+    \begin{sol}
+    \{0, \{0\}, \{0, \{0\}\}, \{\{0\}\}\}
+    \end{sol}
+\end{enumerate}
+\question For two sets $A$ and $B$ of real numbers, the set $A \cdot B$ is deﬁned by,
+\[
+    A \cdot B = \{ab: a \in A, b \in B\}.
+\]
+Determine each of the following sets.
+\begin{enumerate}
+    \item $A \cdot B$ for $A = \{\frac{1}{2}, 1, \sqrt{2}\}$ and $B = \{\sqrt{2}, 2, 4\}$.
+
+    % solution goes here
+    \begin{sol}
+    $\{\frac{\sqrt2}{2}, 1, 2, \sqrt{2}, 4, 2\sqrt{2}, 4\sqrt{2}\}$
+    \end{sol}
+    
+    \item $\R \cdot \R$.
+
+    % solution goes here
+    \begin{sol}
+    $\R$
+    \end{sol}
+    
+    \item $\R \cdot C$ where $C \subseteq \R$ with $|C| = 2$.
+
+    % solution goes here
+    \begin{sol}
+    $\R$
+    
+    \end{sol}
+
+\end{enumerate}
+\question For $A = \{1, 2\}, B = \{-1, 0, 1\}$ and the universal set $U = \{-2, -1, 0, 1, 2\}$, determine
+\begin{enumerate}[label=(\alph*)]
+    \item $A \cup B$.
+
+    % solution goes here
+    \begin{sol}
+    \{-1, 0, 1, 2\}
+    \end{sol}
+    
+    \item $A \cap B$.
+
+    % solution goes here
+    \begin{sol}
+    \{1\}
+    \end{sol}
+    
+    \item $A - B$.
+
+    % solution goes here
+    \begin{sol}
+    \{2\}
+    \end{sol}
+    
+    \item $\overline{B}$.
+
+    % solution goes here
+    \begin{sol}
+    \{-2, 2\}
+    
+    \end{sol}
+    
+    \item $A \times B$.
+
+    % solution goes here
+    \begin{sol}
+    \{(1,-1), (1,0), (1,1), (2,-1), (2,0), (2,1)\}
+    \end{sol}
+\end{enumerate}
+
+\question Give examples of three sets $A, B$ and $C$ such that
+\begin{enumerate}[label=(\alph*)]
+    \item $A \subseteq B \not\subset C$.
+
+    % solution goes here
+    \begin{sol}
+        A = \{1\} \smallbreak
+        B = \{1, 2\} \smallbreak
+        C = \{3\} \smallbreak
+    \end{sol}
+    
+    \item $A \subseteq B, B \in C$ and $A \cap C = \nil$.
+
+    % solution goes here
+    \begin{sol}
+        A = \{1\} \smallbreak
+        B = \{1,2\} \smallbreak
+        C = \{\{1,2\}, 3\} \smallbreak
+    \end{sol}
+    
+    \item $A \in B, A \subset B$ and $A \not\subseteq C$.
+
+    % solution goes here
+    \begin{sol}
+        A = \{1\} \smallbreak
+        B = \{\{1\}, 1, 2\} \smallbreak
+        C = \{3\} \smallbreak
+    \end{sol}
+    
+    \item $A \in B, A \not\subseteq B$ and $B \in C$.
+
+    % solution goes here
+    \begin{sol}
+        A = \{1\} \smallbreak
+        B = \{\{1\}, 2\} \smallbreak
+        C = \{\{\{1\},2\}, 1\} \smallbreak
+    \end{sol}
+\end{enumerate}
+\end{document}

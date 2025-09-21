@@ -1,0 +1,64 @@
+\documentclass{homework}
+\author{Wiyninger, Caleb}
+\class{CSCI 2114: Tashfeen's Data Structures}
+\date{\today}
+\title{Extra Credit: Workflow}
+\address{%
+  Oklahoma City University, %
+  Petree College of Arts \& Sciences, %
+  Computer Science%
+}
+
+\acmfonts
+\newcommand\callit[1]{Store the code in a file called \texttt{#1}.}
+\newcommand\englishwords{%
+  \href{%
+    https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt%
+  }{370,105 unique English words}%
+}
+
+\begin{document} \maketitle
+
+\question Download the \englishwords{} and write a Java program that prints
+all the palindromes\footnote{Words that read the same forwards and
+  backwards \eg madam.} therein that are more than three letters
+long. Listing \ref{pl} shows how to fill a Java array of the
+appropriate size with the lines of a file.
+\callit{Palindrome.java}
+
+% \lstinputlisting[
+%   linerange={19-28},
+%   language={java},
+%   caption={Java function to fill an array with a file.},
+%   label=pl]
+% {code/Palindrome.java}
+
+\question How many three or more letter palindromes did your program find?
+Which is your favourite one?
+
+\section{Example Executions}
+
+Figure \ref{exmp} shows how the output of the code for the files
+\texttt{Palindrome.java} should look like on the standard out. All
+your programs must compile/run from the command line using
+\texttt{javac} and \texttt{java} commands, e. g.,
+
+\begin{verbatim}
+javac Program.java
+java Program
+\end{verbatim}
+
+% \img<exmp>[0.5]
+% {Example execution of the code for the first question.}{media/example.png}
+
+\section{Submission Instructions}
+
+\begin{itemize}
+  \item Submit the source file \texttt{Palindrome.java}. We don't need any
+        dot class files.
+  \item The PDF file \texttt{sol.pdf} should contain written answers to
+        questions as well as a screenshot similar to the one in figure \ref{exmp}
+        that demonstrates your code being compiled and ran.
+\end{itemize}
+
+\end{document}
