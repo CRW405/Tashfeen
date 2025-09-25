@@ -1,10 +1,10 @@
 import random
 
-# generate 1000 string of randomized parethesis
+# generate n string of randomized parethesis
 
 arr = []
 
-n = 10000
+n = 10_000_000
 
 for i in range(n):
 

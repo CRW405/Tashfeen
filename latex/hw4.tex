@@ -1,0 +1,102 @@
+\documentclass{homework}
+\author{Wiyninger, Caleb}  % Uncomment with your name
+\class{MATH 3503: Tashfeen's Discrete Mathematics}
+\date{Spring 2023}  % Uncomment with your semester
+\title{Homework 4}
+\address{
+  Computer Science, %
+  Petree College of Arts \& Sciences, %
+  Oklahoma City University
+}
+
+\begin{document} \maketitle
+
+\question Please read chapter 5 of Chartrand et al. and write a couple sentences about a topic/example/concept that you found difficult or interesting and why?
+
+% solution here
+
+\question The following are relations on the set $\R$ of real numbers. Which of the properties reflexive, symmetric and transitive does each relation below possess?
+\begin{enumerate}[label=(\alph*)]
+	\item $x \ R_1 \ y \text{ if } |x - y| \leq 1$.
+	      % solution here
+	\item $x \ R_2 \ y \text{ if } y \leq 2x + 1$.
+	      % solution here
+	\item $x \ R_3 \ y \text{ if } y = x^2$.
+	      % solution here
+	\item $x \ R_4 \ y \text{ if } x^2 + y^2 = 9$.
+	      % solution here
+\end{enumerate}
+
+\question Let $S = \{1,2,3,4,5,6,7\}$. The relation
+\[
+	R = \{(1, 1),(1, 3),(1, 4),(2, 2),(3, 1),(3, 3),(3, 4),(4, 1),(4, 3),(4, 4),(5, 5),(5, 7),(6, 6),(7, 5),(7, 7)\}
+\]
+on $S$ is an equivalence relation. Determine the distinct equivalence classes.
+
+% Solution here
+
+\question Give an example of an equivalence relation $R$ on the set $A = \{1, 2, 3, 4, 5, 6, 7\}$ with $\mathcal{P}$ the set of equivalence classes such that the following four properties are satisfied:
+
+\begin{enumerate}
+	\item $|\mathcal{P}| = 3$,
+	      % solution here
+	\item There exists no set $S \in \mathcal{P}$ such that $|S| = 3$,
+	      % solution here
+	\item $3 \ \mathord{\not\mathrel{R}} \ 4 \text{ but } 3 \ R \ 5$,
+	      % solution here
+	\item There exists a set $T \in \mathcal{P}$ such that $1, 7 \in T$.
+	      % solution here
+\end{enumerate}
+
+\question Let $A = \{1, 2, 3\}$, $B = \{1, 2, 3, 4, 5\}$ and $C = \{1, 2, 3, 4\}$. Also let $f : A \ra B$ and $g : B \ra C$, where $f = \{(1, 4), (2, 5), (3, 1)\}$ and $g = \{(1, 3), (2, 3), (3, 2), (4, 4), (5, 1)\}$,
+\begin{enumerate}[label=(\alph*)]
+    \item Determine $(g \circ f )(1), (g \circ f )(2)$ and $(g \circ f )(3)$.
+	      % solution here
+    \item Determine $g \circ f$.
+	      % solution here
+\end{enumerate}
+
+\question Each of the following is a function from $\N \times \Z$ to $\Z$. Which of these are onto?
+\begin{enumerate}[label=(\alph*)]
+    \item $f(a, b) = 2a + b$
+	      % solution here
+    \item $f(a, b) = b$
+	      % solution here
+    \item $f(a, b) = 2^ab$
+	      % solution here
+    \item $f(a, b) = |a|-|b|$
+	      % solution here
+    \item $f(a, b) = a+10$
+	      % solution here
+\end{enumerate}
+
+\question Let $f, g$ and $h$ be functions from $\R$ to $\R$ deﬁned by $f(x) = e^x, g(x) = x^3$ and $h(x) = 3x$ for each $x \in \R$. Determine each of the following:
+\begin{enumerate}[label=(\alph*)]
+    \item $(g \circ f )(x).$
+	      % solution here
+    \item $(f \circ g)(x).$
+	      % solution here
+    \item $(h \circ f )(x).$
+	      % solution here
+    \item $(f \circ h)(x).$
+	      % solution here
+    \item a composition of functions that results in $e^{3x^3}$
+	      % solution here
+    \item a composition of functions that results in $3e^{x^3}$
+	      % solution here
+\end{enumerate}
+
+\question Let $f: \R \ra \R$ be deﬁned by $f(x) = 5x + 3$.
+\begin{enumerate}
+    \item Show that $f$ is one-to-one.
+	      % solution here
+    \item Show that $f$ is onto.
+	      % solution here
+    \item Find $f^{-1}(x)$ for $x \in \R$.
+	      % solution here
+\end{enumerate}
+
+\question Prove that the function $f:\R-\{3\} \ra \R - \{1\}$ deﬁned by $f(x)=\frac{x}{x-3}$ is bijective.
+
+% solution here
+\end{document}
