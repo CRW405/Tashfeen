@@ -19,12 +19,40 @@
 \begin{enumerate}[label=(\alph*)]
 	\item $x \ R_1 \ y \text{ if } |x - y| \leq 1$.
 	      % solution here
+        \begin{sol}
+            \begin{enumerate}
+                \item Reflexive since $x-x=0\leq1$
+                \item Symmetric since $|x-y|=|y-x|$
+                \item Not Transitive since it could be $|y-z|>1$
+            \end{enumerate}
+        \end{sol}
 	\item $x \ R_2 \ y \text{ if } y \leq 2x + 1$.
 	      % solution here
+        \begin{sol}
+            \begin{enumerate}
+              \item Not Reflexive since x could be $< -1$
+              \item Not Symmetric since x could be $> 2y+1$
+              \item Not Transitive since y could be $> 2z+1$
+            \end{enumerate}
+        \end{sol}
 	\item $x \ R_3 \ y \text{ if } y = x^2$.
 	      % solution here
+        \begin{sol}
+            \begin{enumerate}
+              \item Not Reflexive since $x\neq x^2$
+              \item Not Symmetric since y may not equal $x^2$
+              \item Not Transitive since z may not equal $y^2$
+            \end{enumerate}
+        \end{sol}
 	\item $x \ R_4 \ y \text{ if } x^2 + y^2 = 9$.
 	      % solution here
+        \begin{sol}
+            \begin{enumerate}
+             \item Not Reflexive since $2x^2$ may not equal 9
+              \item Symmetric since order of addition does not matter
+              \item Not Transitive since $y^2 + z^2$ may not equal 9
+            \end{enumerate}
+        \end{sol}
 \end{enumerate}
 
 \question Let $S = \{1,2,3,4,5,6,7\}$. The relation
@@ -34,18 +62,46 @@
 on $S$ is an equivalence relation. Determine the distinct equivalence classes.
 
 % Solution here
+\begin{sol}
+  \[[1]=\{1,3,4\}\]
+  \[[2]=\{2\}\]
+  \[[5]=\{5,7\}\]
+  \[[6]=\{6\}\]
+\end{sol}
 
 \question Give an example of an equivalence relation $R$ on the set $A = \{1, 2, 3, 4, 5, 6, 7\}$ with $\mathcal{P}$ the set of equivalence classes such that the following four properties are satisfied:
 
 \begin{enumerate}
 	\item $|\mathcal{P}| = 3$,
 	      % solution here
+        \begin{sol}
+          \[\{1,2\}\]
+          \[\{3,4\}\]
+          \[\{5,6,7\}\]
+        \end{sol}
 	\item There exists no set $S \in \mathcal{P}$ such that $|S| = 3$,
 	      % solution here
+        \begin{sol}
+          \[\{1,2\}\]
+          \[\{3,4\}\]
+          \[\{5,6\}\]
+          \[\{7\}\]
+        \end{sol}
 	\item $3 \ \mathord{\not\mathrel{R}} \ 4 \text{ but } 3 \ R \ 5$,
 	      % solution here
+        \begin{sol}
+          \[\{1,2\}\]
+          \[\{3,5\}\]
+          \[\{4,6\}\]
+          \[\{7\}\]
+        \end{sol}
 	\item There exists a set $T \in \mathcal{P}$ such that $1, 7 \in T$.
 	      % solution here
+        \begin{sol}      
+          \[\{1,2,7\}\]
+          \[\{3,5\}\]
+          \[\{4,6\}\]
+        \end{sol}
 \end{enumerate}
 
 \question Let $A = \{1, 2, 3\}$, $B = \{1, 2, 3, 4, 5\}$ and $C = \{1, 2, 3, 4\}$. Also let $f : A \ra B$ and $g : B \ra C$, where $f = \{(1, 4), (2, 5), (3, 1)\}$ and $g = \{(1, 3), (2, 3), (3, 2), (4, 4), (5, 1)\}$,
