@@ -35,17 +35,20 @@ public class ListExperiment {
     long start;
     long end;
 
-    for (List ls : [al,ll]) {
-        int i = 1;
-        while (i < n) {
-            start = System.currentTimeMillis();
-            ls.add(i);
-            end = System.currentTimeMillis() - start;
-            sb.append(end, ", ");
-        }
-        sb.append("\n");
+    for (int l = 0; l <= 1; l++) {
+      ls = (l == 1) ? al : ll;
+      int i = 1;
+      while (i < n) {
+        start = System.nanoTime();
+        ls.add(i);
+        end = System.nanoTime() - start;
+        sb.append(end + ", ");
+        i++;
+      }
+      sb.setLength(sb.length() - 2);
+      sb.append("\n");
+      write("append.csv", sb.toString(), false);
     }
-    System.out.println(sb.toString());
     return;
   }
 
@@ -118,5 +121,5 @@ public class ListExperiment {
    */
   public static int randomInteger(int min, int max) {
     return min + (int) (Math.random() * (max - min));
-  }s
+  }
 }
