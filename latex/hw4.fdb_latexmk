@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1758721833.78369 "/home/think/Documents/Tashfeen/latex/hw4.tex" "hw4.pdf" "hw4" 1758721834.31782 0
-  "/home/think/Documents/Tashfeen/latex/hw4.tex" 1758721833.00219 3685 65cf9abebe64c985d125ab5c417ace39 ""
+["pdflatex"] 1759345038.8241 "/home/think/Documents/Tashfeen/latex/hw4.tex" "hw4.pdf" "hw4" 1759345039.44225 0
+  "/home/think/Documents/Tashfeen/latex/hw4.tex" 1759345038.62627 6261 7a09938b378b38419650d065a7d5e1d1 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1755987285 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1755987285 2840 216e6e45ad352e2456e1149f28885bee ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc" 1755987285 2327 9d6df24f9c4f7368395224341a95523a ""
@@ -148,9 +148,9 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1756325590 5311557 9da84c45f5b388655502706482323571 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1756325474 2686925 d436767037daffb47b8ea6fd7f596e38 ""
   "homework.cls" 1756401616.56071 1774 06d8a47cff7bc68f668cb55be61e5618 ""
-  "hw4.aux" 1758721834.2527 1109 be9bb96ba984fbc48ad8e172abffa385 "pdflatex"
-  "hw4.out" 1758721834.2527 892 90c6c50081e38215e6c4242c82d4ca24 "pdflatex"
-  "hw4.tex" 1758721833.00219 3685 65cf9abebe64c985d125ab5c417ace39 ""
+  "hw4.aux" 1759345039.36354 1112 1458b7ac5eb9a1f1f6d11a14c11e6091 "pdflatex"
+  "hw4.out" 1759345039.36492 895 035dadd87f50757884a586d862583eb6 "pdflatex"
+  "hw4.tex" 1759345038.62627 6261 7a09938b378b38419650d065a7d5e1d1 ""
   "hwcmd.sty" 1756401742.58302 4074 bdbd3bdebb47f70eaea642979dc37084 ""
   "hwlst.sty" 1756401722.2831 1327 a36eb16d0edfea2e6864ad4432a88d27 ""
   "hwsymb.sty" 1756401694.62326 1894 d3f977352165c34da19b1465f5d81a78 ""

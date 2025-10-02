@@ -9,6 +9,7 @@ public class ListExperiment {
     List<Integer> ls = null;
     StringBuilder sb = new StringBuilder();
     appendTimes((int) Math.pow(2, 20), ls, sb);
+    sb.setLength(0);
     searchTimes((int) Math.pow(2, 17), ls, sb);
   }
 
@@ -36,7 +37,7 @@ public class ListExperiment {
     long end;
 
     for (int l = 0; l <= 1; l++) {
-      ls = (l == 1) ? al : ll;
+      ls = (l == 1) ? ll : al;
       int i = 1;
       while (i < n) {
         start = System.nanoTime();
@@ -47,8 +48,8 @@ public class ListExperiment {
       }
       sb.setLength(sb.length() - 2);
       sb.append("\n");
-      write("append.csv", sb.toString(), false);
     }
+    write("append.csv", sb.toString(), false);
     return;
   }
 
@@ -72,6 +73,31 @@ public class ListExperiment {
    * @param sb The string builder to join the nanoseconds.
    */
   public static void searchTimes(int n, List<Integer> ls, StringBuilder sb) {
+    ArrayList<Integer> al = new ArrayList<Integer>();
+    LinkedList<Integer> ll = new LinkedList<Integer>();
+
+    long start;
+    long end;
+
+    for (int l = 0; l <= 1; l++) {
+      ls = (l == 1) ? ll : al;
+      int i = 1;
+      while (Math.pow(2, i) < n) {
+        ls.clear();
+        int min = 0;
+        int max = (int) Math.pow(2, i);
+        fillList(min, max, ls);
+        int x = randomInteger(min, max);
+        start = System.nanoTime();
+        binarySearch(ls, x, min, max - 1);
+        end = System.nanoTime() - start;
+        sb.append(end + ", ");
+        i++;
+      }
+      sb.setLength(sb.length() - 2);
+      sb.append("\n");
+    }
+    write("search.csv", sb.toString(), false);
     return;
   }
 
@@ -83,7 +109,14 @@ public class ListExperiment {
    * @return Whether n was found in ls.
    */
   public static boolean binarySearch(List<Integer> ls, int n, int s, int r) {
-    return false;
+    if (s > r)
+      return false;
+    int mid = s + (r - s) / 2;
+    if (ls.get(mid) == n)
+      return true;
+    if (ls.get(mid) > n)
+      return binarySearch(ls, n, s, (mid - 1));
+    return binarySearch(ls, n, mid + 1, r);
   }
 
   /**

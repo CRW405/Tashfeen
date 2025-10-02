@@ -104,26 +104,55 @@ on $S$ is an equivalence relation. Determine the distinct equivalence classes.
         \end{sol}
 \end{enumerate}
 
-\question Let $A = \{1, 2, 3\}$, $B = \{1, 2, 3, 4, 5\}$ and $C = \{1, 2, 3, 4\}$. Also let $f : A \ra B$ and $g : B \ra C$, where $f = \{(1, 4), (2, 5), (3, 1)\}$ and $g = \{(1, 3), (2, 3), (3, 2), (4, 4), (5, 1)\}$,
-\begin{enumerate}[label=(\alph*)]
+\question Let $A = \{1, 2, 3\}$, $B = \{1, 2, 3, 4, 5\}$ and $C = \{1, 2, 3, 4\}$. \smallbreak Also let $f : A \ra B$ and $g : B \ra C$, \smallbreak where $f = \{(1, 4), (2, 5), (3, 1)\}$ and $g = \{(1, 3), (2, 3), (3, 2), (4, 4), (5, 1)\}$,
+\begin{enumerate}[label=(\alph*)] \bigbreak
     \item Determine $(g \circ f )(1), (g \circ f )(2)$ and $(g \circ f )(3)$.
 	      % solution here
+      \begin{sol}
+        \begin{enumerate}
+            \item $(g \circ f)(1)=g(4)=4$
+            \item $(g \circ f)(2)=g(5)=1$
+            \item $(g \circ f)(3)=g(1)=3$
+        \end{enumerate}
+      \end{sol}
     \item Determine $g \circ f$.
 	      % solution here
+      \begin{sol}
+          $g \circ f = \{(1,4),(2,1),(3,3)\}$
+      \end{sol}
 \end{enumerate}
 
 \question Each of the following is a function from $\N \times \Z$ to $\Z$. Which of these are onto?
 \begin{enumerate}[label=(\alph*)]
     \item $f(a, b) = 2a + b$
 	      % solution here
+      \begin{sol}
+        Onto \\
+          $z \in \Z$  \\
+          $a=1$\\
+          $b=z-2$\\
+          $2a+b=z$
+      \end{sol} 
     \item $f(a, b) = b$
 	      % solution here
+      \begin{sol}
+        Onto since b is always an integer
+      \end{sol}
     \item $f(a, b) = 2^ab$
 	      % solution here
+      \begin{sol}
+        Not onto since the output will always be a multiple of 2 so odd integers cannot be outputs
+      \end{sol}
     \item $f(a, b) = |a|-|b|$
 	      % solution here
+      \begin{sol}
+        Onto. Negative integers can be reached by setting a to 0 and positive integers can be reached by setting b to 0
+      \end{sol}
     \item $f(a, b) = a+10$
 	      % solution here
+      \begin{sol}
+        Not onto since there are integers less than 10
+      \end{sol}
 \end{enumerate}
 
 \question Let $f, g$ and $h$ be functions from $\R$ to $\R$ deﬁned by $f(x) = e^x, g(x) = x^3$ and $h(x) = 3x$ for each $x \in \R$. Determine each of the following:
