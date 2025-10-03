@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.27)  2 OCT 2025 15:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.27)  3 OCT 2025 12:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -682,9 +682,7 @@ nc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
 
 [2]
 
-[3]
-
-[4{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rmsc.enc}] (./hw4.aux)
+[3{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rmsc.enc}] (./hw4.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -693,13 +691,13 @@ Package rerunfilecheck Info: File `hw4.out' has not changed.
 (rerunfilecheck)             Checksum: 035DADD87F50757884A586D862583EB6;895.
  ) 
 Here is how much of TeX's memory you used:
- 19970 strings out of 475171
- 334443 string characters out of 5767095
+ 19969 strings out of 475171
+ 334437 string characters out of 5767095
  724207 words of memory out of 5000000
  42476 multiletter control sequences out of 15000+600000
  592067 words of font info for 71 fonts, out of 8000000 for 9000
  175 hyphenation exceptions out of 8191
- 99i,7n,107p,603b,660s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,7n,107p,603b,663s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dis
 t/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/l
 m/lmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share
@@ -708,10 +706,10 @@ public/lm/lmr6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/
 share/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf-dist/fonts/ty
 pe1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb
 ></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on hw4.pdf (4 pages, 181487 bytes).
+Output written on hw4.pdf (3 pages, 180978 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 132 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
+ 158 PDF objects out of 1000 (max. 8388607)
+ 129 compressed objects within 2 object streams
+ 43 named destinations out of 1000 (max. 500000)
  73 words of extra memory for PDF output out of 10000 (max. 10000000)
 

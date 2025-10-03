@@ -73,12 +73,30 @@ public class BinaryHeap<T extends Comparable<T>> {
     }
   }
 
-  private void heapifyUp(Node<T> v) {
-    // implement me
+  private void heapifyDown(Node<T> v) {
+    if (v != null && v.left != null && v.right != null) {
+      Node<T> min = v.left.compareTo(v.right) < 0 ? v.left : v.right;
+      Node<T> max = v.left.compareTo(v.right) < 0 ? v.left : v.right;
+      if (v.compareTo(min) > 0) {
+        v.swap(min);
+        heapifyDown(min);
+      } else if (v.compareTo(max) > 0) {
+        v.swap(max);
+        heapifyDown(max);
+      } else if (v != null && v.left != null ^ v.right != null) {
+        Node<T> child = v.right == null ? v.left : v.right;
+        if (v.compareTo(min) > 0)
+          v.swap(child);
+        heapifyDown(child);
+      }
+    }
   }
 
-  private void heapifyDown(Node<T> v) {
-    // implement me
+  private void heapifyUp(Node<T> v) {
+    if (v.parent == null || v.compareTo(v.parent) >= 0)
+      return;
+    v.swap(v.parent);
+    heapifyUp(v.parent);
   }
 
   private void enqueue(Node<T> v) {

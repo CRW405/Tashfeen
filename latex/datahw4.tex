@@ -1,7 +1,7 @@
 \documentclass{homework}
-% \author{Tashfeen, Ahmad}
-\class{CSCI 2114: Tashfeen's Data Structures}
-% \date{\today}
+\author{Wiyninger, Caleb}
+\class{CSCI 2114: tashfeenn's Data Structures}
+\date{\today}
 \title{Homework 4}
 \address{%
   Oklahoma City University, %
@@ -15,7 +15,7 @@
 You may download all the code for this homework at:
 \url{https://tashfeen.org/s/ds/hw4code.zip}.
 
-\question\label{plot} Recall from class the runtimes given in table \ref{runtime}.
+\question\label{plot} Recall from class the runtimes given in table %\ref{runtime}.
 
 \tbl<runtime>{Asymptotic runtime complexities for array lists and linked lists} {
   Data Structure\textbackslash Operation & Random Insert & Random Access \\
@@ -37,11 +37,16 @@ files (CSV) with rows corresponding with nanoseconds taken to
 append the $i^\text{th}$ element or perform a binary search in a
 list of size $2^i$. Plot each row in these CSV files against their
 index using your favourite plotting utility. You may use this
-\texttt{plot\_list.py} (make sure you set the appropriate
+\texttt{plot\_l7ist.py} (make sure you set the appropriate
 variables) if you want. Give the two plots.
 
 Do the plots confirm or overrule what we know about the runtimes
 linked and array lists? Discuss.
+
+\begin{sol}
+  \img<img>[0.65]{}{../Data Structures/hm4/given/plot.png}
+Confirms. Any variances can be explained by Java garbage collection.
+\end{sol}
 
 \question Extend \texttt{Structure.java} to implement \texttt{Stack.java}
 and \texttt{Queue.java} \ie
@@ -60,8 +65,14 @@ public class Stack<T extends Comparable<T>> extends Structure<T> {...}
         not balanced while ``()(())'' is balanced. State your answer as a
         ratio in the decimal point notation. Save the class in
         \texttt{Balance.java}.
+        \begin{sol}
+          0.07787
+        \end{sol}
   \item Use your queue implementation to draw the
         \href{https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle}{Sierpinksi's triangle}.
+        \begin{sol}
+          \img<img>[0.65]{}{~/Pictures/Screenshots/Screenshot_03-Oct_12-19-13_1096.png}
+        \end{sol}
 \end{enumerate}
 
 \begin{lstlisting}[language=Java]
@@ -79,6 +90,10 @@ public class Sierpinski {
 to implement the methods \texttt{heapifyUp(Node<T> v)} and
 \texttt{heapifyDown(Node<T> v)}. Run the file and verify your
 implementation keeps the heap property.
+
+\begin{sol}
+  \img<img>[0.65]{}{~/Pictures/Screenshots/Screenshot_03-Oct_13-52-12_27508.png}
+\end{sol}
 
 \section*{Submission Instructions}
 
