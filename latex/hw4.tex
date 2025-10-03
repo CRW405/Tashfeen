@@ -1,7 +1,7 @@
 \documentclass{homework}
 \author{Wiyninger, Caleb}  % Uncomment with your name
 \class{MATH 3503: Tashfeen's Discrete Mathematics}
-\date{Spring 2023}  % Uncomment with your semester
+\date{\today}  % Uncomment with your semester
 \title{Homework 4}
 \address{
   Computer Science, %
@@ -14,6 +14,9 @@
 \question Please read chapter 5 of Chartrand et al. and write a couple sentences about a topic/example/concept that you found difficult or interesting and why?
 
 % solution here
+\begin{sol}
+  
+\end{sol}
 
 \question The following are relations on the set $\R$ of real numbers. Which of the properties reflexive, symmetric and transitive does each relation below possess?
 \begin{enumerate}[label=(\alph*)]
@@ -155,33 +158,89 @@ on $S$ is an equivalence relation. Determine the distinct equivalence classes.
       \end{sol}
 \end{enumerate}
 
-\question Let $f, g$ and $h$ be functions from $\R$ to $\R$ deﬁned by $f(x) = e^x, g(x) = x^3$ and $h(x) = 3x$ for each $x \in \R$. Determine each of the following:
+\question Let $f, g$ and $h$ be functions from $\R$ to $\R$ deﬁned by \smallbreak 
+$f(x) = e^x$, \smallbreak
+$g(x) = x^3$ and \smallbreak
+$h(x) = 3x$ \smallbreak
+for each $x \in \R$. Determine each of the following:
 \begin{enumerate}[label=(\alph*)]
     \item $(g \circ f )(x).$
 	      % solution here
+      \begin{sol}
+          $e^{3x}$
+      \end{sol}
     \item $(f \circ g)(x).$
 	      % solution here
+      \begin{sol}
+        $e^{x^3}$
+      \end{sol}
     \item $(h \circ f )(x).$
 	      % solution here
+      \begin{sol}
+          $3e^x$
+      \end{sol}
     \item $(f \circ h)(x).$
 	      % solution here
+      \begin{sol}
+          $e^{3x}$
+      \end{sol}
     \item a composition of functions that results in $e^{3x^3}$
 	      % solution here
+      \begin{sol}
+          $(f \circ h \circ g)(x)$
+      \end{sol}
     \item a composition of functions that results in $3e^{x^3}$
 	      % solution here
+      \begin{sol}
+          $(h \circ f \circ g)(x)$
+      \end{sol}
 \end{enumerate}
 
 \question Let $f: \R \ra \R$ be deﬁned by $f(x) = 5x + 3$.
 \begin{enumerate}
     \item Show that $f$ is one-to-one.
 	      % solution here
+      \begin{sol}
+        \[f(x)=f(y)\] \smallbreak
+        \[5x+3=5y+3\] \smallbreak
+        \[5x=5y\] minus 3 \smallbreak
+        \[x=y\] divide by 5\smallbreak
+      \end{sol}
     \item Show that $f$ is onto.
 	      % solution here
+      \begin{sol}
+        \[y=5x+3\] \smallbreak
+        \[y-3=5x\] \smallbreak
+        \[\frac{y-3}{5}=x\] \smallbreak
+        any real number can be an ouput for any real number input
+      \end{sol}
     \item Find $f^{-1}(x)$ for $x \in \R$.
 	      % solution here
+      \begin{sol}
+        \[f^{-1}(x)=\frac{x-3}{5}\] \smallbreak
+        is the inverse for every real number
+      \end{sol}
 \end{enumerate}
 
 \question Prove that the function $f:\R-\{3\} \ra \R - \{1\}$ deﬁned by $f(x)=\frac{x}{x-3}$ is bijective.
 
 % solution here
+\begin{sol}
+  one-to-one: \smallbreak
+  \[\frac{x}{x-3}=\frac{y}{y-3}\] \smallbreak
+  \[x(y-3)=y(x-3)\] \smallbreak
+  \[xy-3x=xy-3y\] \smallbreak
+  \[-3x=-3y\] \smallbreak
+  \[x=y\] \smallbreak
+  onto: \smallbreak
+  \[y=\frac{x}{x-3}\] \smallbreak
+  \[y(x-3)=x\] \smallbreak
+  \[yx-3y=x\] \smallbreak
+  \[yx-3y-x=0\] \smallbreak
+  \[x(y-1)=3y\] \smallbreak
+  \[x=\frac{3y}{y-1}\]
+  inverse \smallbreak
+  \[f^{-1}(x)=\frac{3x}{x-1}\] \smallbreak
+  It is bijective since it is one-to-one, onto, and has an inverse
+\end{sol}
 \end{document}
