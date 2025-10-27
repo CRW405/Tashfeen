@@ -1,0 +1,93 @@
+\documentclass{homework}
+\author{Wiyninger, Caleb}  % Uncomment with your name
+\class{MATH 3503: Tashfeen's Discrete Mathematics}
+\date{\today}  % Uncomment with your semester
+\title{Homework 5}
+\address{
+  Computer Science, %
+  Petree College of Arts \& Sciences, %
+  Oklahoma City University
+}
+
+\begin{document} 
+\maketitle
+
+\question Please read chapter 8 of Chartrand et al. and write a couple sentences about a topic/example/concept that you found difficult or interesting and why?
+
+\question Each student at a certain university is given a 6-digit code (such as 123789 or 001122).
+\begin{enumerate}[label=(\alph*)]
+    \item How many different codes are there?
+      \begin{sol}
+      $10^6$ since there are 6 choices of 10 digits per position
+      \end{sol}
+    \item How many codes read the same forward and backward?
+      \begin{sol}
+        $10^3$ since both halfs must match then that narrows our positions to half
+      \end{sol}
+    \item How many codes contain only odd digits?
+      \begin{sol}
+        $5^6$ since 1,3,5,7,9 are the only odd $\N$ under 10
+      \end{sol}
+    \item How many codes contain at least one even digit?
+      \begin{sol}
+      $10^6 - 5^6$ since we already found all codes that are all odds than we can just get all other codes
+      \end{sol}
+\end{enumerate}
+ 
+\question How many different 10-bit strings begin with 1011 or 0110?
+\begin{sol}
+  there are $2^6$ combinations per beginning since the first 4 positions are already decided. For both it would be $s(2^6)$
+\end{sol}
+
+\question A password on a computer system consists of four characters, each of which is either a digit or a letter of the alphabet. Suppose that each password must contain at least one digit and at least one letter. How many different such passwords are there?
+\begin{sol}
+  %abcdefghijklmnopqrstuvwxyz 26
+%0-9 = 10
+%36
+%36^4 - 26^4 - 10^4 
+  $36^4 - 26^4 - 10^4$ Since without character constraints it is $36^4$ but there cannot be a case where all are letters ($-26^4$) nor a case where all are digits ($-10^4$)
+\end{sol}
+
+\question A total of 70 students who go to football, basketball or hockey games on a regular basis are surveyed as to which of these three events they attend. They responded:
+
+38 students go to football games. \par
+38 students go to basketball games. \par
+35 students go to hockey games. \par
+17 students go to both football and basketball games. \par
+15 students go to both football and hockey games. \par
+16 students go to both basketball and hockey games. \\
+
+How many go to all three?
+
+\begin{sol}
+  %70
+  %38 + 38 + 35 = 111
+  %17 + 15 + 16 = 48
+  %111 - 70 = 41 
+  %48 - 41 = 7
+  7 since there are a total of 70 people but there are 111 games attendended, 48 of those games are the result of people going to two seperate games or more. That means there are 41 (111-70) games being attended by someone that has attended 1 game before, but there are 48 (17+15+16) games that are the result of repeat game attendences which gives us 7 (48-41) games that must have been attended as a third game. 
+\end{sol}
+
+\question How many people must be present to guarantee that
+\begin{enumerate}[label=(\alph*)]
+    \item at least two have the same birthday?
+    \item at least two of their birthdays are in the same month?
+    \item at least three of their birthdays are in one of the months January, February, March, April or at least four of their birthdays are in one of the remaining months?
+\end{enumerate}
+
+\question How many different 8-bit strings contain exactly 5 1s?
+
+\question Show that $\binom{2n}{2} =2\binom{n}{2} + n^2$.
+
+\question A student committee is to consist of 3 seniors and 4 juniors. A total of 6 seniors and 8 juniors have volunteered to serve on the committee. How many committees are possible?
+
+\question A total of 5 seniors, 3 juniors and 4 sophomores have volunteered to serve on a 4-person committee. How many committees are possible if
+\begin{enumerate}[label=(\alph*)]
+    \item there is no other restriction on membership for the committee?
+    \item at least one senior, one junior and one sophomore must serve on the committee?
+    \item at least 3 seniors must serve on the committee?
+    \item at least one senior must serve on the committee?
+\end{enumerate}
+
+
+\end{document}
