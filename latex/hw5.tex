@@ -14,6 +14,10 @@
 
 \question Please read chapter 8 of Chartrand et al. and write a couple sentences about a topic/example/concept that you found difficult or interesting and why?
 
+\begin{sol}
+  I liked the part in 8.4 where it talks about where this meaning of the word combination comes from and Pascals letter. I like learning about the history of math. 
+\end{sol}
+
 \question Each student at a certain university is given a 6-digit code (such as 123789 or 001122).
 \begin{enumerate}[label=(\alph*)]
     \item How many different codes are there?
@@ -65,7 +69,7 @@ How many go to all three?
   %17 + 15 + 16 = 48
   %111 - 70 = 41 
   %48 - 41 = 7
-  7 since there are a total of 70 people but there are 111 games attendended, 48 of those games are the result of people going to two seperate games or more. That means there are 41 (111-70) games being attended by someone that has attended 1 game before, but there are 48 (17+15+16) games that are the result of repeat game attendences which gives us 7 (48-41) games that must have been attended as a third game. 
+  7 since there are a total of 70 people but there are 111 games attendended, 48 (17+15+16) of those games are the result of people going to two seperate games or more. That means there are 41 (111-70) games being attended by someone that has attended 1 game before, but there are 48 games that are the result of repeat game attendences which gives us 7 (48-41) games that must have been attended as a third game. 
 \end{sol}
 
 \question How many people must be present to guarantee that
@@ -75,7 +79,29 @@ How many go to all three?
     \item at least three of their birthdays are in one of the months January, February, March, April or at least four of their birthdays are in one of the remaining months?
 \end{enumerate}
 
+\begin{sol}
+  % 365 12
+  %
+  %c:
+  % jan-apr = 2 = 8 
+  % may-dec = 3 = 24
+  % 32
+  % 32+1
+  \begin{enumerate}[label=(\alph*)]
+    \item You would need 366 since either the last birthday would fall on another or if not, then there is at least one day with multiple birthdays
+    \item You would need 13 people to guarantee that at least 2 birthdays are in the same month since there a 12 months, a thirteenth person would have to be the second in a month or if not then there is already another month that already has 2 or more birthdays in it 
+    \item You would need 33 people to guarantee that either condtion would be met. If we took the maxes of each condition without being a guarantee we would get 8 + 24 = 32. An extra person (33) would guarantee that either condition would or would already be met.
+  \end{enumerate}
+\end{sol}
+
 \question How many different 8-bit strings contain exactly 5 1s?
+
+\begin{sol}
+  %   n        n!
+  % (   ) = --------
+  %   k     k!(n-k)!
+  56 since $\frac{8!}{5!(8-5)!}=56$
+\end{sol}
 
 \question Show that $\binom{2n}{2} =2\binom{n}{2} + n^2$.
 

@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.10.27)  27 OCT 2025 10:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.10.27)  27 OCT 2025 10:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**latex/datahw4.tex
-(./latex/datahw4.tex
+**latex/hw5.tex
+(./latex/hw5.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/share/texmf-dist/tex/latex/homework/homework.cls
@@ -223,7 +223,7 @@ Package: babel 2025/02/14 v25.4 The multilingual framework for pdfLaTeX, LuaLaT
 eX and XeLaTeX
 \babel@savecnt=\count304
 \U@D=\dimen167
-\l@unhyphenated=\language34
+\l@unhyphenated=\language32
 
 (/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
@@ -232,4 +232,41 @@ eX and XeLaTeX
 (/usr/share/texmf-dist/tex/generic/babel/errbabel.def)
 
 ! Package babel Error: Unknown option 'italian'. Either you misspelled it
-(babel)                or the language definition f
+(babel)                or the language definition file italian.ldf
+(babel)                was not found.
+(babel)                There is a locale ini file for this language.
+(babel)                If it’s the main language, try adding `provide=*'
+(babel)                to the babel package options.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4138 \ProcessOptions*
+                       
+? ^^[
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, E to edit your file,
+1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+H for help, X to quit.
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.4138 \ProcessOptions*
+                       
+Valid options are, among others: shorthands=, KeepShorthandsActive,
+activeacute, activegrave, noconfigs, safe=, main=, math=
+headfoot=, strings=, config=, hyphenmap=, or a language name.
+
+ 
+Here is how much of TeX's memory you used:
+ 5390 strings out of 474560
+ 98373 string characters out of 5750493
+ 503779 words of memory out of 5000000
+ 28413 multiletter control sequences out of 15000+600000
+ 559600 words of font info for 37 fonts, out of 8000000 for 9000
+ 350 hyphenation exceptions out of 8191
+ 107i,0n,127p,424b,62s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!

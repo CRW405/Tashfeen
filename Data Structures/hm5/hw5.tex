@@ -1,0 +1,96 @@
+\documentclass{homework}
+% \author{Tashfeen, Ahmad}
+\class{CSCI 2114: Tashfeen's Data Structures}
+% \date{\today}
+\title{Homework 5}
+\address{%
+  Oklahoma City University, %
+  Petree College of Arts \& Sciences, %
+  Computer Science%
+}
+
+\acmfonts
+\graphicspath{{./media}}
+
+\begin{document} \maketitle
+
+\begin{minipage}[t]{0.45\textwidth}
+  \begin{em}
+    Est genus in totidem tenui ratione redactum
+
+    scriptula, quot menses lubricus annus habet;
+
+    Parua tabella capit ternos utrimque lapillos,
+
+    in qua uicisse est continuasse suos.
+  \end{em}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+  There is another game divided into as many parts
+
+  as there are months in the year;
+
+  A small board has three pieces on either side,
+
+  the winner must get all the pieces in a straight line.
+\end{minipage}
+\begin{flushright}
+  ---Ovid (Ars Amatoria III, lines 365-369)
+\end{flushright}
+
+\question Read Chapter 5, Sections 5.1 and 5.2 (pg. 161--167) of
+``Stuart Russell and Peter Norvig. \emph{Artificial Intelligence A
+  Modern Approach} $3^\text{rd}$ edition. (2010).'' There is a copy at
+the library. No--seriously, \emph{read ith}!
+
+\question Implement the Minimax algorithm for adversarial search in the
+\href{https://en.wikipedia.org/wiki/Tic-tac-toe}{Tic-tac-toe} game tree.
+
+Start by \href{https://tashfeen.org/s/ds/minimax.zip}{downloading}
+and reading the starter code. You need to only edit the
+\texttt{Minimax.java} by implementing the unfinished Java
+methods. Upon successfully implementing all of the API, you may run
+\texttt{javac Game.java} and \texttt{java Game}. You'll be presented
+to make the first move.  Click at the appropriate place to start the
+game.
+
+\img<example>[0.15]{%
+  Gameplay in the state of the art graphics by Tashfeen Studios$^\text{TM}$.
+}{one, two, three, four, five}
+
+Run \texttt{Test.java} and see if all the tests pass. It verifies the
+mathematical properties of the tree model you wrote.
+
+\question Once your game is functional and your \texttt{Minimax.java} class
+contains a game tree.  You should start another Java class like this,
+\begin{lstlisting}[language=Java]
+public class Investigate {
+    public static void main(String[] args) {
+        Minimax model = new Minimax(3);
+        System.out.println(model.root);
+    }
+}
+\end{lstlisting}
+
+Write appropriate code in this file to answer the following questions,
+
+\begin{enumerate}
+  \item How many tree-leaves result in a draw?
+  \item How many of these leaves  win for the first (max) player?
+  \item How many of these leaves win for the second (min) player?
+\end{enumerate}
+
+\question Ask two non-CS professors to play your implementation on
+your computer.  Before they play, ask them if they think they can win
+and and after that how do they think the ``AI'' maybe picking its
+moves.  State which professors (and their department) you interviewed
+and summarise their responses.
+
+\section*{Submission Instructions}
+
+\begin{enumerate}
+  \item Turn in a PDF containing any plots, figures and/or answers from the homework.
+  \item Turn in your, \texttt{Minimax.java} and \texttt{Investigate.java}.
+\end{enumerate}
+
+\end{document}
