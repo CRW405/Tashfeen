@@ -45,11 +45,11 @@
 
 \question A password on a computer system consists of four characters, each of which is either a digit or a letter of the alphabet. Suppose that each password must contain at least one digit and at least one letter. How many different such passwords are there?
 \begin{sol}
-  %abcdefghijklmnopqrstuvwxyz 26
+  %abcdefghijklmnopqrstuvwxyz 26 with caps = 52
 %0-9 = 10
-%36
-%36^4 - 26^4 - 10^4 
-  $36^4 - 26^4 - 10^4$ Since without character constraints it is $36^4$ but there cannot be a case where all are letters ($-26^4$) nor a case where all are digits ($-10^4$)
+%62
+%62^4 - 52^4 - 10^4 
+  $62^4 - 52^4 - 10^4$ Since without character constraints it is $62^4$ but there cannot be a case where all are letters ($-52^4$) nor a case where all are digits ($-10^4$)
 \end{sol}
 
 \question A total of 70 students who go to football, basketball or hockey games on a regular basis are surveyed as to which of these three events they attend. They responded:
@@ -87,6 +87,8 @@ How many go to all three?
   % may-dec = 3 = 24
   % 32
   % 32+1
+  %
+  Assuming it is not a leap year*
   \begin{enumerate}[label=(\alph*)]
     \item You would need 366 since either the last birthday would fall on another or if not, then there is at least one day with multiple birthdays
     \item You would need 13 people to guarantee that at least 2 birthdays are in the same month since there a 12 months, a thirteenth person would have to be the second in a month or if not then there is already another month that already has 2 or more birthdays in it 
@@ -104,6 +106,10 @@ How many go to all three?
 \end{sol}
 
 \question Show that $\binom{2n}{2} =2\binom{n}{2} + n^2$.
+
+\begin{sol}
+  $\binom{2n}{2}$ can be stated as select a combination of 2 things from a 2n things. $2\binom{n}{2}+n^{2}$ can be stated as select a combination of 2 things from n things twice then select 1 thing from n twice. Since 
+\end{sol}
 
 \question A student committee is to consist of 3 seniors and 4 juniors. A total of 6 seniors and 8 juniors have volunteered to serve on the committee. How many committees are possible?
 
