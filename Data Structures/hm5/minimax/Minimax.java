@@ -13,10 +13,34 @@ public class Minimax {
 
   private int growTree(Vertex root, int turn, int utility) {
     // implement me
+    utility = root.terminal();
+    if (utility != Vertex.CONT) {
+      root.utility = (byte) utility;
+      return utility;
+    }
+    for (int i = 0; i < root.board.length; i++) {
+      root.grow(i, turn);
+    }
+    for (Vertex child : root.children) {
+      child.utility = (byte) growTree(child, -turn, utility);
+    }
+    return root.minimax(turn);
   }
 
   public void play(int place) {
     // implement me
+    boolean ValidMove = false;
+
+    for (Vertex child : this.root.children) {
+      if (child.board[place] == 1) {
+        this.root = child;
+        ValidMove = true;
+      }
+    }
+    if (ValidMove && this.root.children.size() > 0) {
+      this.root = this.root.min();
+    }
+    this.message = evalMessage();
   }
 
   public int gameOverState() {

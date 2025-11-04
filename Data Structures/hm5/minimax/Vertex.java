@@ -87,23 +87,15 @@ public class Vertex implements Comparable<Vertex> {
   }
 
   public String toString() {
-    int size = this.size;
     StringBuilder sb = new StringBuilder();
-    String format = " [%2d";
 
-    for (int i = 1; i < size; i++)
-      format += ", %2d";
-    format += "]";
-
-    for (int i = 0; i < size; i++) {
-      int[] row = new int[size];
-      for (int j = 0; j < size; j++)
-        row[j] = this.board[i * size + j];
-      sb.append(String.format(format, row));
-      if (i < size - 1)
+    for (int i = 0; i < this.size; i++) {
+      for (int j = 0; j < this.size; j++)
+        sb.append(String.format("%d ", this.board[i * this.size + j]));
+      if (i < this.size - 1)
         sb.append("\n");
     }
-    return "[" + sb.toString().substring(1) + "]";
+    return "-----\n" + sb.toString() + "\n-----";
   }
 
   public Vertex min() {
