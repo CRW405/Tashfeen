@@ -40,7 +40,7 @@
  
 \question How many different 10-bit strings begin with 1011 or 0110?
 \begin{sol}
-  there are $2^6$ combinations per beginning since the first 4 positions are already decided. For both it would be $s(2^6)$
+  there are $2^6$ combinations per beginning since the first 4 positions are already decided. For both it would be $2(2^6)$
 \end{sol}
 
 \question A password on a computer system consists of four characters, each of which is either a digit or a letter of the alphabet. Suppose that each password must contain at least one digit and at least one letter. How many different such passwords are there?
@@ -108,10 +108,14 @@ How many go to all three?
 \question Show that $\binom{2n}{2} =2\binom{n}{2} + n^2$.
 
 \begin{sol}
-  $\binom{2n}{2}$ can be stated as select a combination of 2 things from a 2n things. $2\binom{n}{2}+n^{2}$ can be stated as select a combination of 2 things from n things twice then select 1 thing from n twice. Since 
+  $\binom{2n}{2}$ can be stated as "select a combination of 2 things from a 2n things". $2\binom{n}{2}+n^{2}$ can be stated as "select a combination of 2 things from n things twice then select 1 thing from n twice". Since that can be simplified to "select 2 from 2n" and to fulfill that, you would have already fulfilled "select 1 from n twice" so it can be simplified to $\binom{2n}{2}$ whish is equal $\binom{2n}{2}$
 \end{sol}
 
 \question A student committee is to consist of 3 seniors and 4 juniors. A total of 6 seniors and 8 juniors have volunteered to serve on the committee. How many committees are possible?
+
+\begin{sol}
+  There are $\binom{6}{3} \cdot \binom{8}{4}$ possible, since we just get the possible choices for group one and multiply it by the combinations for group 2
+\end{sol}
 
 \question A total of 5 seniors, 3 juniors and 4 sophomores have volunteered to serve on a 4-person committee. How many committees are possible if
 \begin{enumerate}[label=(\alph*)]
@@ -120,6 +124,15 @@ How many go to all three?
     \item at least 3 seniors must serve on the committee?
     \item at least one senior must serve on the committee?
 \end{enumerate}
+
+\begin{sol}
+  \begin{enumerate}[label=(\alph*)]
+    \item $\binom{12}{4}$
+    \item $(\binom{5}{2}\binom{3}{1}\binom{4}{1}) + (\binom{5}{1}\binom{3}{2}\binom{4}{1}) + (\binom{5}{1}\binom{3}{1}\binom{4}{2})$ add all cases where one class has two and others have one together
+    \item $\binom{5}{4}+\binom{5}{3}\binom{7}{1}$ cases where all are seniors + cases where one is not a senior
+    \item $\binom{12}{4}-\binom{7}{4}$ total cases - cases where there are no seniors
+  \end{enumerate}
+\end{sol}
 
 
 \end{document}
