@@ -6,13 +6,13 @@ public class Investigate {
 
     // 1 - How many tree-leaves result in a draw?
     int drawCount = drawCount(model.root);
-    System.out.println(drawCount);
+    System.out.println("Draws: " + drawCount);
     // 2 - How many of the leaves win for the first (aka max) player
     int maxWinCount = maxWinCount(model.root);
-    System.out.println(maxWinCount);
+    System.out.println("Max wins: " + maxWinCount);
     // 3 - How many of the leaves win for the second (aka min) player
     int minWinCount = minWinCount(model.root);
-    System.out.println(minWinCount);
+    System.out.println("Min wins: " + minWinCount);
 
     // System.out.println(model.root);
     // model.play(0);
