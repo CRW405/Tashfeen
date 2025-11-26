@@ -1,0 +1,343 @@
+\documentclass{homework}
+\author{Wiyninger, Caleb}
+\class{CSCI 2114: Tashfeen's Data Structures}
+\date{\today}
+\title{Homework 6}
+\address{%
+  Oklahoma City University, %
+  Petree College of Arts \& Sciences, %
+  Computer Science%
+}
+
+\acmfonts
+
+\newcommand\providecode[1]{%
+  \href{https://tashfeen.org/s/ds/#1}{\texttt{#1}}%
+}
+\newcommand\hashmap{%
+  \href{%
+    https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html%
+  }{hash map}%
+}
+
+\newcommand\englishwords{%
+  \href{%
+    https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt%
+  }{370,105 unique English words}%
+}
+
+\newcommand\important{%
+  \footnote{Note that Java's class \href{%
+      https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html%
+    }{\texttt{PriorityQueue}} is not \href{%
+      https://stackoverflow.com/q/2288241/12035739}{dynamic} %
+    and breaks ties arbitrarily.}%
+}
+
+\renewcommand\textvisiblespace[1][.5em]{%
+  \makebox[#1]{%
+    \kern.07em
+    \vrule height.3ex
+    \hrulefill
+    \vrule height.3ex
+    \kern.07em
+  }% <-- don't forget this one!
+}
+
+\begin{document} \maketitle
+
+\question Head over to the \url{https://www.gutenberg.org} and find an
+interesting book that is available in the text format. Perform word
+frequency analysis on the text of the book using the Java's built-in
+\hashmap. Before you start any counting, make sure you clean your text
+of any characters that are not lower-case English alphabet or an
+invisible space character, visibly rendered as
+``\textvisiblespace''. Print out the top ten words with their
+respective frequencies in descending order. The words should be
+\textit{at least six letters}. For example, a sample output for the
+George Orwell's novel \textit{1984} is given bellow. Place the code
+for this question in a file called \texttt{Frequency.java} and copy
+any output in your PDF to answer this question.
+
+\begin{sol}
+  The King In Yellow by Robert W. Chambers
+  (\url{https://www.gutenberg.org/ebooks/8492})
+\begin{verbatim}
+         looked: 324
+       clifford: 290
+        through: 258
+         before: 238
+         little: 226
+         turned: 210
+       hastings: 192
+         street: 180
+        project: 176
+      gutenberg: 174
+\end{verbatim}
+\end{sol}
+
+\question Let the 27 letter alphabet consist of a space and 26 lower case
+English letters: $\{\text{\textvisiblespace, a, b, c,} \hdots
+  \text{, z}\}$. We may further order the alphabet with $f =
+  \{\text{(\textvisiblespace, 0), (a, 1), (b, 2), (c, 3), (d,
+    4),}\hdots, \text{(z, 26)}\}$. A \emph{hash} function $h$ takes
+any arbitrary string $s$ of the alphabet's characters to a
+non-negative integer. Let $s$ be of length $n$ where $s_i$ is the
+$i^\text{th}$ character of $s$, $h(s)$ is given as,
+\[
+  h(s) \is \sum_{i=0}^{n-1}(f(s_{i})\times 27^i) \mod m.
+\]
+As trivial examples, for a sufficiently large value of $m$,
+\[
+  h(\text{\textvisiblespace})  \is 0 \is (0 \times 27^0), \quad
+  h(\text{a})                  \is 1 \is (1 \times 27^0), \quad
+  h(\text{b})                  \is 2 \is (2 \times 27^0) \mod m.
+\]
+And, for a non-trivial example,
+\begin{align*}
+  h(\text{bobby})
+   & \is (f(\text{b}) \times 27^4)+(f(\text{o}) \times 27^3)+(f(\text{b}) \times 27^2)+(f(\text{b}) \times 27^1)+(f(\text{y}) \times 27^0) \mod m \\
+   & \is (2 \times 27^4)+(15 \times 27^3)+(2 \times 27^2)+(2 \times 27^1)+(25 \times 27^0) \mod m                                                 \\
+   & \is 1062882 + 295245 + 1458 + 54 + 25 \mod m                                                                                                 \\
+   & \is 1359664 \mod m
+\end{align*}
+
+Write a Java program that takes $h(s)$ and prints out $s$ \eg
+\texttt{java Inverse 1359664} prints \texttt{bobby}. Use this
+program to figure out the string $s$ for the following $h(s)$,
+\begin{footnotesize}
+\begin{verbatim}
+144644361721427313922062331675403123867343950242520475640707597283261643774925737501589409076350039814
+\end{verbatim}
+\end{footnotesize}
+
+Yes, you have to use \texttt{BigInteger}; you'll be okay.
+
+\begin{sol}
+if a machine is expected to be infallible it cannot also be intelligent
+\end{sol}
+
+\question Download the professor's implementation of the above hash function
+in Java from the linked file \providecode{HashBrown.java}. Also
+download the list of \englishwords. Write a program that finds all
+the hash collisions among these words for each $m_i$ given bellow.
+\begin{align*}
+  m_1 & = 2^{31}-1 = \texttt{Integer.MAX\_VALUE} \\
+  m_2 & = 2^{63}-1 = \texttt{Long.MAX\_VALUE}
+\end{align*}
+
+For every hash collision corresponding to each $m_i$ give the hash
+value and the collided words. E. g., there are 30 hash collisions
+when $m=2^{31}-1$ with one of them being ${h(\text{decoy}) =
+      2226796 = h(\text{eternish})}$. Use the main method of
+\texttt{HashBrown.java} for this question.
+
+\question Read Cormen, et al. \textit{Introduction to Algorithms}
+($3^\text{rd}$ Edition) pages 647--652 and pages 658--659. You'll
+be implementing the Dijkstra's and the Bellman-Ford\footnote{Also
+  known as the ``distance vector routing'' algorithm in the networks
+  field.} algorithms. Download the files containing the adjacency
+matrices,
+
+\begin{enumerate}
+  \item \providecode{dijkstra1.txt}
+  \item \providecode{dijkstra2.txt}
+  \item \providecode{bellmanford1.txt}
+  \item \providecode{bellmanford2.txt}
+\end{enumerate}
+
+The above matrices define edge weights between vertices that
+should be named by taking as many labels as the rows/columns in
+the list: $\text{a, b, c,} \hdots, \text{z}$.
+
+Write a Java class \texttt{Graph.java} that implements both the
+Dijkstra's\important{} and the Bellman-Ford algorithms. Use your
+Dijkstra's implementation to solve the files
+\texttt{dijkstra1.txt} and \texttt{dijkstra2.txt}. Similarly, use
+your Bellman-Ford algorithm to solve the files
+\texttt{bellmanford1.txt} and \texttt{bellmanford2.txt}. For each
+of the graphs and the algorithm, report the minimum distance with
+which each vertex can be reached and their respective parent
+vertex in your answers PDF. E. g, the output of Dijkstra's
+algorithm on \texttt{dijkstra1.txt} should look like,
+
+\begin{sol}
+\begin{verbatim}
+Dijkstra on dijkstra1.txt
+a: 0 via a
+b: 8 via d
+c: 9 via b
+d: 5 via a
+e: 7 via d
+Dijkstra on dijkstra2.txt
+a: 0 via a
+b: 243 via t
+c: 186 via p
+d: 237 via y
+e: 356 via b
+f: 173 via a
+g: 191 via p
+h: 196 via p
+i: 244 via k
+j: 188 via u
+k: 3 via a
+l: 295 via a
+m: 204 via t
+n: 212 via f
+o: 188 via z
+p: 115 via a
+q: 293 via t
+r: 233 via u
+s: 253 via v
+t: 202 via k
+u: 183 via f
+v: 216 via y
+w: 184 via k
+x: 271 via d
+y: 202 via j
+z: 175 via p
+Bellman-Ford on bellmanford1.txt
+a: 0 via a
+b: 2 via c
+c: 4 via d
+d: 7 via a
+e: -2 via b
+Bellman-Ford on bellmanford2.txt
+a: 0 via a
+b: 24 via z
+c: -2 via a
+d: 38 via s
+e: 56 via p
+f: 31 via d
+g: -8 via a
+h: -2 via l
+i: 75 via u
+j: 7 via c
+k: 110 via l
+l: -11 via g
+m: 23 via p
+n: -1 via u
+o: -5 via h
+p: 16 via v
+q: 29 via b
+r: 4 via g
+s: 33 via x
+t: 83 via v
+u: -5 via r
+v: 24 via j
+w: 15 via c
+x: 10 via c
+y: -3 via l
+z: 11 via u
+\end{verbatim}
+If you run bellman ford in one of the dijkstras then it will return the same results but running dijkstra on one of the bellman fords will not give you the right answer
+\end{sol}
+
+You may verify the above by manually drawing the
+\texttt{dijkstra1.txt} graph on a piece of paper and running
+Dijkstra on it by hand.
+
+\question Can you run the Bellman-Ford algorithm on \texttt{dijkstra1.txt}
+and \texttt{dijkstra2.txt} to obtain the same result as you did by
+running the Dijkstra's algorithm? Similarly, can you run
+Dijkstra's algorithm on \texttt{bellmanford1.txt} and
+\texttt{bellmanford2.txt} to obtain the same results as you did by
+running Bellman-Ford algorithm?
+
+\begin{sol}
+
+\begin{verbatim}
+Dijkstra on bellmanford1.txt
+a: 0 via a
+b: 2 via c
+c: 4 via d
+d: 7 via a
+e: 2 via b
+Dijkstra on bellmanford2.txt
+a: 0 via a
+b: 24 via z
+c: -2 via a
+d: 38 via s
+e: 56 via p
+f: 31 via d
+g: -8 via a
+h: -2 via l
+i: 75 via u
+j: 7 via c
+k: 110 via l
+l: -11 via g
+m: 23 via p
+n: -1 via u
+o: -5 via h
+p: 16 via v
+q: 29 via b
+r: 4 via g
+s: 33 via x
+t: 83 via v
+u: -5 via r
+v: 24 via j
+w: 15 via c
+x: 10 via c
+y: -3 via l
+z: 11 via u
+Bellman-Ford on dijkstra1.txt
+a: 0 via a
+b: 8 via d
+c: 9 via b
+d: 5 via a
+e: 7 via d
+Bellman-Ford on dijkstra2.txt
+a: 0 via a
+b: 243 via t
+c: 186 via p
+d: 237 via y
+e: 356 via b
+f: 173 via a
+g: 191 via p
+h: 196 via p
+i: 244 via k
+j: 188 via u
+k: 3 via a
+l: 295 via a
+m: 204 via t
+n: 212 via f
+o: 188 via z
+p: 115 via a
+q: 293 via t
+r: 233 via u
+s: 253 via v
+t: 202 via k
+u: 183 via f
+v: 216 via y
+w: 184 via k
+x: 271 via d
+y: 202 via j
+z: 175 via p
+\end{verbatim}
+\end{sol}
+
+\question On a graph of exclusively positive edge weights, which algorithm
+is a better choice?
+
+\begin{sol}
+  You should use dijkstra since its optimized for all postive graphs
+\end{sol}
+
+\question Watch \href{https://www.youtube.com/watch?v=CgW0HPHqFE8}{A*
+  (A-Star) Pathfinding Algorithm Visualization on a Real Map} on
+YouTube to see how a path finding algorithm known as the A$^*$
+looks in execution on a real world graph. Note that A$^*$ is
+essentially the Dijkstra's algorithm with the addition of an
+``heuristic'' function.
+
+\section*{Submission Instructions}
+
+\begin{enumerate}
+  \item Turn in a PDF containing any outputs and answers from the
+        homework.
+  \item Also turn in your \texttt{Frequency.java}, \texttt{Inverse.java},
+        \texttt{HashBrown.java} (with a main method) and finally the
+        \texttt{Graph.java}.
+\end{enumerate}
+
+\end{document}

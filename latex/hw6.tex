@@ -16,7 +16,7 @@
 \question Please read chapter 9 of Chartrand et al. and write a couple sentences about a topic/example/concept that you found difficult or interesting and why?
 
 \begin{sol}
-  
+  Every concept after Q6 confused me. I dont really understand how generating functions work intuitively. 
 \end{sol}
 
 \question{\label{q16}} What is the exact term in $\paren{\sqrt{x} - \frac{1}{\sqrt{x}}}^{10}$ containing $x$?
@@ -28,7 +28,7 @@
   \newline
   $\sum_{k=0}^{10}\binom{10}{k}x^{5-k}(-1)^k$
   \newline
-  When k=4,$\binom{10}{4}, \indent  x^{5-4}=x^1=x$
+  When k=4,$\binom{10}{4}=210, \indent  x^{5-4}=x^1=x$
 \end{sol}
 
 \question Use the Binomial Theorem to simplify the sum,
@@ -51,7 +51,7 @@
   % 0 - 3 times in front invalid
   % 8 digits total - every time there are 0s in front
   % top = total, bottom = remove restricted values
-  $\frac{8!}{3!2!1!}$
+  $\frac{8!}{3!3!2!}-\frac{7!}{3!2!2!}=350$
 \end{sol}
 
 \question A professor has 10 identical new pens that he no longer needs. In how many ways can these pens be given to 3 students if
@@ -67,17 +67,35 @@
   %(       )
   %   k-1
   \begin{enumerate}[label=(\alph*)]
-    \item $\binom{10+3-1}{3-1} = \binom{12}{2}$
-    \item $\binom{10-3+3-1}{3-1} = \binom{9}{2}$
-    \item $\binom{10-6+3-1}{3-1} = \binom{6}{2}$
-    \item $\binom{10-9+3-1}{3-1} = \binom{3}{2}$
+    \item $\binom{10+3-1}{3-1} = \binom{12}{2} = 66$
+    \item $\binom{10-3+3-1}{3-1} = \binom{9}{2} = 36$
+    \item $\binom{10-6+3-1}{3-1} = \binom{6}{2} = 15$
+    \item $\binom{10-9+3-1}{3-1} = \binom{3}{2} = 3$
   \end{enumerate}
 \end{sol}
 
 \question How many 4-digit numbers are there, the sum of whose digits is 11?
 
 \begin{sol}
-  % d1, d2, d3, d4
+  Find cases where $a > 0$: \\
+    $a + b + c + d = 11$ \\
+    $x = a - 1$ \\
+    $x + 1 + b + c + d = 11 \implies x + b + c + d = 10$ \\
+    $\binom{10+4-1}{4-1} = 286 \quad \text{// count for } a > 0$ \\
+
+  Remove cases where $a > 9$:
+    $\text{If } a > 9, \quad y = a - 10 \quad \text{(aka } y = x - 9\text{)},$ \\
+    $y + 10 + b + c + d = 11 \implies y + b + c + d = 1,$ \\
+    $\binom{1+4-1}{4-1} = 4.$ \\
+
+  Remove cases where $b$, $c$, $d > 9$:
+    $\text{For } b > 9, \quad y = b - 10$ \\
+    $x + y + 10 + c + d = 10 \implies x + y + c + d = 0$ \\
+    $\binom{0+4-1}{4-1} = 1 $ \\
+
+  Repeat the above for $c$ and $d$ to get $1$ and $1$ \\
+  
+  $\binom{13}{3} - 4 - 1 - 1 - 1 = 279$ \\
 \end{sol}
 
 \question A man enters Ben's Bagels to buy a dozen bagels only to learn that even though Ben has a large supply of plain bagels and blueberry bagels, he only has two cinnamon bagels left and no other kinds.
@@ -86,11 +104,65 @@
     \item Determine the coefficient of $x^{12}$ of the product in (a). What information does this coefficient provide?
 \end{enumerate}
 
+\begin{sol}
+  % plain, blueberry = 1/(1-x)
+  % cinnamon = (1 + x + x^2) ref: sum(n=2,k=0)(x^k)
+  % together: (1/(1-x))^2 * (1 + x + x^2) = (1 + x + x^2)/(1-x)^2
+  \begin{enumerate}[label=(\alph*)]
+    \item Since plain and blueberry supplies are infinite, we can state them as $\frac{1}{1-x}$ \newline
+      Cinnamon bagels are limited to 2, so we can state them as $\sum_{k=0}^{n=2}(x^k) = 1 + x + x^2$ \newline
+      $(1+x+x^2)(\frac{1}{1-x})^2=\frac{1+x+x^2}{(1-x)^2}$
+    \item $\frac{1+x+x^2}{1-x^2}=(1+x+x^2)(1-x)^{-2}$ \newline 
+      We know that we can expand $(1-x)^{-2}=1+2x+3x^2+\dots+(n+1)x^n+\dots$ \newline
+      We can see that we can find the coefficient with $1+n$ \newline
+      If we distribute, we get $1(1-x)^{-2}+x(1-x)^{-2}+x^2(1-x)^{-2}$ \newline
+      That simplifies to $(n+1)+(n)+(n-1)$ when we look just for the coefficient since x and $x^2$ shifts the expansion\newline
+      Since n = 12, we get $13 + 12 + 11 = 36$ \newline
+      This number tells us the number of ways we can get 12 bagels out of all our choices. If we plugged in 13 then it would be for 13 bagels, etc.
+  \end{enumerate}
+\end{sol}
+
 \question Suppose that we are interested in the number of non-negative integer solutions $a, b$ and $c$ of the equation $a + 2b + 3c = r$, where $r \in \N$.
 \begin{enumerate}[label=(\alph*)]
     \item What is this number when $r \in \{1, 2, 3, 4\}$?
     \item Use generating functions to describe this number for a general $r \in \N$.
 \end{enumerate}
+
+\begin{sol}
+  \begin{enumerate}[label=(\alph*)]
+    % a = r - 2b - 3c
+    % r=1, b=0, c=0: 1-0-0=1 
+    % r=2, b=0, c=0: 2-0-0=2
+    % r=3, b=0, c=0: 3-0-0=3
+    % r=4, b=0, c=0: 4-0-0=4
+    \item \begin{itemize}
+        \item r=1: 1 solution
+        \item r=2: 2 solutions
+        \item r=3: 3 solutions
+        \item r=4: 4 solutions
+      \end{itemize}
+      % a contribution: 1 + x + x^2 + x^3 + ... (icrements of 1) = 1/(1-x)
+      % b contribution: 1 + x^2 + x^4 + x^6 + ... (increments of 2) = 1/(1-x^2)
+      % c contribution: 1 + x^3 + x^6 + x^9 + ... (increments of 3) = 1/(1-x^3)
+      % a_contribution * b_contribution * c_contribution = 1/(1-x) * 1/(1-x^2) * 1/(1-x^3) = 1/((1-x)(1-x^2)(1-x^3))
+      %
+      % c=0: a + 2b = r
+      % c=1: a + 2b = r-3
+      % c=2: a + 2b = r-6
+      % ...
+      % max c = r/3: a + 2b = r - 3c 
+      % max b = (r - 3c)/2: a = r - 3c - 2b 
+      % tack on +1 to account for a=0
+      % n=r/3 since c is the largest contributor
+      % so,
+      % solutions = sum(c=0,n=r/3)( (r - 3c)/2 + 1 )
+    \item the max value of c is r/3 since a + 2b can be written as r-3c \newline 
+      max b = $\frac{r-3c}{2}$\newline 
+      a cannot be 0 so we must add 1 \newline 
+      since c is the largest contributor, n = r/3 \newline 
+    so, solutions = $\sum_{c=0}^{n=r/3}(\frac{r-3c}{2}+1)$
+  \end{enumerate}
+\end{sol}
 
 \question A man buys 6 doughnuts, each of which is a plain doughnut, a powdered doughnut or a glazed doughnut. How many possible selections are there if he buys at least one doughnut of each kind?
 \begin{enumerate}[label=(\alph*)]
@@ -112,5 +184,47 @@
           % \end{table}
     \item Answer the question above by determining the coefficient of $x^6$ in a product of polynomials and/or power series.
     \item Answer the question above by computing $\binom{s+t-1}{s}$ for an appropriate choice of $s$ and $t$.
+
+\pagebreak{}
+
+\begin{sol}
+  \begin{enumerate}[label=(\alph*)]
+    \item \begin{table}[hbtp]
+              \centering
+              \begin{tabular}{|| c | c | c ||} 
+                  \hline
+                  % A & B & C & D \\ \hline
+                  1 & 1 & 4 \\ \hline
+                  1 & 2 & 3 \\ \hline
+                  1 & 3 & 2 \\ \hline
+                  1 & 4 & 1 \\ \hline
+                  2 & 1 & 3 \\ \hline
+                  2 & 2 & 2 \\ \hline
+                  2 & 3 & 1 \\ \hline
+                  3 & 1 & 2 \\ \hline
+                  3 & 2 & 1 \\ \hline
+                  4 & 1 & 1 \\ \hline
+              \end{tabular}
+              \caption{Selections Table.}\label{tab:sel}
+          \end{table}
+          % choose at least one: x/1-x
+          % three types of doughnuts: (x/1-x)^3
+          % expand: x^3/(1-x)^3 = x^3(1-x)^-3
+          % (1-x)^-k = sum(n=0,inf)( (n+k-1 choose k-1)x^n )
+          % k = 3 since (1-x)^-3
+          % so, sum(n=0,inf)( (n+3-1 choose 3-1)x^n ) = sum(n=0,inf)( (n+2 choose 2)x^n )
+          % plugging in 3 for n since we have x^3: (3+2 choose 2) = (5 choose 2) = 10
+          % 10 = 10 
+        \item  we rewrite the selections for the donuts each as x/1-x. \newline 
+          for all three types of donuts, we get $(\frac{x}{1-x})^3 = \frac{x^3}{(1-x)^3} = x^3(1-x)^{-3}$ \newline
+          expanding $(1-x)^{-k} = \sum_{n=0}^{\infty} \binom{n+k-1}{k-1}x^n$ \newline
+         we let k = 3 since wer're trying to find $x^6$ and we have $(1-x)^{-3}$ \newline
+         plugging in, we get $\sum_{n=0}^{\infty} \binom{n+3-1}{3-1}x^n = \sum_{n=0}^{\infty} \binom{n+2}{2}x^n$ \newline
+         $\binom{5}{2} = 10$
+       \item we can set s = number of required donuts since there must be at least 1 type of each. t can be the extra 3 that can be anything which comes out $\binom{3+3-1=5}{3}=10$
+  \end{enumerate}
+
+\end{sol}
 \end{enumerate}
+
 \end{document}
