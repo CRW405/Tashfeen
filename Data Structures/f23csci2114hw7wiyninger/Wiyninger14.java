@@ -1,16 +1,12 @@
 public class Wiyninger14 {
   // longest collatz sequence
+  // 837799
   public static void main(String[] args) {
-    int largest = 0;
-    int number = 0;
+    Long largest = 0L;
+    Long number = 0L;
 
-    for (int i = 1; i < 1_000_000; i += 2) {
-
-      if (i % 2 == 0) {
-        continue;
-      }
-
-      int length = collatz(i);
+    for (Long i = 1L; i < 1_000_000L; i += 2L) {
+      Long length = collatz(i);
 
       if (length > largest) {
         largest = length;
@@ -21,26 +17,14 @@ public class Wiyninger14 {
     System.out.println(number);
   }
 
-  public static int collatz(int n) {
-    int length = 1;
-
-    while (n != 1) {
-      if (n % 2 == 0) {
-        n = whenEven(n);
-      } else {
-        n = whenOdd(n);
-      }
-      length++;
+  public static Long collatz(Long n) {
+    if (n == 1) {
+      return 1L;
+    } else if (n % 2 == 0) {
+      return 1 + collatz(n / 2);
+    } else {
+      return 1 + collatz(3 * n + 1);
     }
-
-    return length;
   }
 
-  public static int whenEven(int n) {
-    return n / 2;
-  }
-
-  public static int whenOdd(int n) {
-    return 3 * n + 1;
-  }
 }
