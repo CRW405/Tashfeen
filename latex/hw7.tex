@@ -1,0 +1,80 @@
+\documentclass{homework}
+\author{Wiyninger, Caleb}  % Uncomment with your name
+\class{MATH 3503: Tashfeen's Discrete Mathematics}
+\date{\today}  % Uncomment with your semester
+\title{Homework 7}
+\address{
+  Computer Science, %
+  Petree College of Arts \& Sciences, %
+  Oklahoma City University
+}
+
+\begin{document} \maketitle
+
+\question Please read chapter 10 of Chartrand et al. and write a couple sentences about a topic/example/concept that you found difficult or interesting and why?
+
+\begin{sol}
+  I liked this chapter. Probability is neat. I liked the parts where we maximized profits like the sweater problem or the ball game example because I like money.
+\end{sol}
+
+\question During the last class period of the semester, each student in a graduate computer science class with 10 students is required to give a brief report on his or her class project. The professor randomly selects the order in which the reports are to be given. Two students have been working on similar projects and would like to give their reports consecutively. What is the probability that this will happen?
+
+\begin{sol}
+  There are 10 students and 2 that want to present together. If we treat the two students as one unit then we have 9 units in total. Either student could go before the other which is a total of 2 possible ways. Our probability can be calculated with $\frac{9!2!}{10!} =  \frac{9!2!}{10*9!} = \frac{2}{10} = \frac{1}{5}$
+\end{sol}
+
+\question A coin is flipped three times.
+
+\begin{enumerate}[label=(\alph*)]
+	\item What is the probability of getting three heads?
+	\item What is the probability of getting three heads given that the first flip came up heads?
+	\item What is the probability of getting three heads given that the first two flips resulted in two heads?
+	\item What is the probability of getting three heads given that the first three flips resulted in all heads?
+	\item What is the probability of getting three heads given that at least one of the first two flips resulted in heads?
+	\item What is the probability of getting three heads given that at most one of the first two flips resulted in heads?
+\end{enumerate}
+
+\begin{sol}
+  % TTT, TTH, THT, HTT, HTH, THH, HHH, HHT
+
+  \begin{enumerate}[label=(\alph*)]
+    \item $\frac{1}{2^3} = \frac{1}{8}$
+    \item $\frac{1}{2^3/2} = \frac{1}{4}$
+    \item $\frac{1}{2^3/4} = \frac{1}{2}$
+    \item $\frac{1}{2^3/8} = 1$
+    \item $\frac{1}{2^3 - 2} = \frac{1}{6}$
+    \item This would never happen since three heads would require more than one head in the first two flips
+  \end{enumerate}
+
+\end{sol}
+
+\question Three dice are tossed. What is the probability that 1 was obtained on two of the dice given that the sum of the numbers on the three dice is 7?
+
+\begin{sol}
+  Assuming these are 6 sided dice, there are 15 ways the dice can add up to 7: with the sets {1,1,5} with 3 permuations, {1,2,4} with 6 permuations, {1,3,3} with 3 permutations, and {2,2,3} with 3 permutations. $3+6+3+3=15$. Only one of those sets({1,1,5}) satisfy the first condition so the probability is $\frac{3}{15} = \frac{1}{5}$
+\end{sol}
+
+\question Early each fall, a department store manager purchases a large number of winter sweaters. He pays $\$60$ for each sweater. Any sweater that isn’t sold by Christmas will be sold for a $\$10$ dollar loss. Experience says that he can sell $40\%$ of them by Christmas if he prices the sweaters at $\$100$ each, he can sell $60\%$ of them if each is priced at $\$90$ and he can sell $70\%$ of them if they are priced at $\$80$ each. How should the manager price the sweaters?
+
+\begin{sol}
+  He should price them at 90. If we calcuate profit per sweater, we get $((90-60)*.6)+(-10*.4)$ (winter sales) + (other sales) which comes out to an average profit of 14 dollars per sweater. 100 dollars = 10, 80 = 11 so 90 dollars maximises profit.
+\end{sol}
+
+\question A bowl contains 3 red balls, 2 white balls, and 1 blue ball
+\begin{enumerate}[label=(\alph*)]
+	\item What is the expected number of white balls obtained if three balls are selected at random from the bowl?
+	\item What is the expected number of white balls obtained if three balls are selected at random from the bowl, one at a time, where a ball is returned to the bowl after it is selected?
+\end{enumerate}
+
+\begin{sol}
+  % r,r,r,w,w,b 
+  % w_c = 2 / 6 = 1 / 3 
+
+  \begin{enumerate}[label=(\alph*)]
+    \item You would expect to get 1 since there are 2 white balls out of six $\frac{2}{6} = \frac{1}{3}$
+    \item It would still be same since the source of balls remains unchnanged
+  \end{enumerate}
+
+\end{sol}
+
+\end{document}

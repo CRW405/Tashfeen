@@ -7,7 +7,7 @@ public class Wiyninger15 {
     int smallGridSize = 2 + 2;
     int largeGridSize = 20 + 20;
 
-    System.out.println(calculatePaths(smallGridSize));
+    // System.out.println(calculatePaths(smallGridSize));
     System.out.println(calculatePaths(largeGridSize));
   }
 

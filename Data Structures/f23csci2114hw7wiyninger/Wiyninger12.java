@@ -5,16 +5,10 @@ public class Wiyninger12 {
     Long triangularNumber = 0L;
 
     Long n = 1L;
-    while (calculateDivisors(calculateTriangularNumber(n)) <= 500) {
+    while (calculateDivisors((n * (n + 1) / 2)) <= 500)
       n++;
-    }
 
-    triangularNumber = calculateTriangularNumber(n);
-    System.out.println(triangularNumber);
-  }
-
-  public static Long calculateTriangularNumber(Long n) {
-    return n * (n + 1) / 2;
+    System.out.println((n * (n + 1) / 2));
   }
 
   public static Long calculateDivisors(Long n) {

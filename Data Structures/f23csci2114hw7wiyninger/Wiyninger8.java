@@ -19,7 +19,7 @@ public class Wiyninger8 {
         largestString = productString;
       }
     }
-    System.out.println(largestString);
+    // System.out.println(largestString);
     System.out.println(largest);
   }
 }

@@ -1,5 +1,4 @@
-public class Wiyninger7 {
-  // 10001st Prime
+public class Wiyninger7 { // 10001st Prime
   //
   // 104743
   public static void main(String[] args) {

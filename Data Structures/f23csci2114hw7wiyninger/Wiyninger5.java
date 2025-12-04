@@ -4,7 +4,7 @@ public class Wiyninger5 {
     // long n = 10;
     long n = 20;
 
-    for (long i = n; i < factorial(n); i++) {
+    for (long i = n; i < factorial(n); i += n) {
       if (cleanlyDivisable(i, n)) {
         System.out.println(i);
         break;

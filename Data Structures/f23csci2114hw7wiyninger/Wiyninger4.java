@@ -22,10 +22,10 @@ public class Wiyninger4 {
         // System.out.println("comparing: " + nString.substring(0, l / 2) + " with " +
         // nString.substring(l / 2, l));
         if (nString.substring(0, l / 2).equals(reverse(nString.substring(l / 2, l)))) {
-          System.out.println("Palindrome found: ");
-          System.out.println("n: " + n);
-          System.out.println("i: " + i);
-          System.out.println("j: " + j);
+          // System.out.println("Palindrome found: ");
+          // System.out.println("n: " + n);
+          // System.out.println("i: " + i);
+          // System.out.println("j: " + j);
           if (n > largest) {
             largest = n;
           }

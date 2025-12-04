@@ -11,8 +11,8 @@ public class Wiyninger6 {
 
     y = y * y;
 
-    System.out.println("1^2 + 2^2 + ...: " + x);
-    System.out.println("(1 + 2 + 3+...)^2: " + y);
+    // System.out.println("1^2 + 2^2 + ...: " + x);
+    // System.out.println("(1 + 2 + 3+...)^2: " + y);
 
     System.out.println("Difference: " + (y - x));
   }

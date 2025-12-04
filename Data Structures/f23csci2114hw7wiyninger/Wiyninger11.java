@@ -43,15 +43,13 @@ public class Wiyninger11 {
         }
 
         if (col + 3 < grid.length && row + 3 < grid[col].length) {
-          diagRightProduct = grid[col][row] * grid[col + 1][row + 1] * grid[col + 2][row + 2]
-              * grid[col + 3][row + 3];
+          diagRightProduct = grid[col][row] * grid[col + 1][row + 1] * grid[col + 2][row + 2] * grid[col + 3][row + 3];
           if (diagRightProduct > largest) {
             largest = diagRightProduct;
           }
         }
         if (col + 3 < grid.length && row - 3 >= 0) {
-          diagLeftProduct = grid[col][row] * grid[col + 1][row - 1] * grid[col + 2][row - 2]
-              * grid[col + 3][row - 3];
+          diagLeftProduct = grid[col][row] * grid[col + 1][row - 1] * grid[col + 2][row - 2] * grid[col + 3][row - 3];
           if (diagLeftProduct > largest) {
             largest = diagLeftProduct;
           }
