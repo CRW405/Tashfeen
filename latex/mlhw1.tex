@@ -1,0 +1,298 @@
+\documentclass{homework}
+\author{Wiyninger, Caleb}  % uncomment with your name
+\class{CSCI 3203: Tashfeen's Machine Learning I}
+\title{Homework 1}
+\address{
+  Oklahoma City University,
+  Petree College of Arts \& Sciences,
+  Computer Science
+}
+\date{\today}  % Uncomment with your semester
+
+\DeclareMathOperator{\row}{row}
+\DeclareMathOperator{\col}{col}
+
+\newcommand\listcomp{\href{%
+    https://www.w3schools.com/python/python_lists_comprehension.asp%
+  }{Python list comprehension}}
+
+\begin{document} \maketitle
+
+Please show all work for full credit. You're only allowed to use
+the standard built-in Python 3 libraries.
+
+\newcommand\marry{\href{%
+    https://www.youtube.com/watch?v=mGYmiQkah4o%
+  }{Mary's Room: A philosophical thought experiment -- Eleanor Nelsen}}
+
+\question Watch \marry{} on YouTube.
+
+Do you think there is something about human learning that is
+different than machine learning?
+
+\begin{sol}
+  Yes
+\end{sol}
+
+\question Rate your skills out of ten in the following subjects,
+\begin{enumerate}
+  \item Probability and Statistics
+  \item Calculus
+  \item Linear Algebra
+  \item Python
+\end{enumerate}
+
+\begin{sol}
+  \begin{enumerate}
+  \item 1
+  \item 1
+  \item 1
+  \item 3
+  \end{enumerate}
+\end{sol}
+
+\question Of the sub-plots (a), (b), (c) and (d) in figure %\ref{cor}
+, state
+which ones have no correlation, negative correlation, position
+correlation and non-linear correlation.
+
+% \img<cor>[0.5]{Different types of correlations.}{media/correlation.png}
+
+\begin{sol}
+\begin{enumerate}[label=(\alph*)]
+      \item position
+      \item negative
+      \item no correlation
+      \item non-linear
+  \end{enumerate}
+\end{sol}
+
+\question Assume that the probability of Alice going to class everyday given
+she got a good grade is $\frac{5}{6}$ and the probability of her
+getting a good grade is $\frac{2}{5}$ while the probability of her
+going to class everyday is $\frac{1}{3}$. What is the probability
+that Alice gets a good grade given she went to class everyday?
+
+Hint: Thomas Bayes.
+
+\begin{sol}
+  $\frac{5}{6} * \frac{2}{5} / \frac{1}{3} = 1$
+\end{sol}
+
+\question We define the natural numbers as,
+\[
+  \N = \{1, 2, 3, 4, 5, ...\}
+\]
+Let $x$ be the arithmetic mean of the first $2^{33}-1$ natural
+numbers. What is $\log_2(x)$?
+
+Hint: Carl Friedrich Gauss.
+
+\begin{sol}
+  $log(2^{32})=32$ 
+\end{sol}
+
+\question Let \texttt{arr = [x \% 2 for x in range((2**100)-1)]} be a
+Python list using \listcomp{}. What is the statistical mode of the
+list \texttt{arr}? Justify your answer.
+
+\begin{sol}
+  0 since odd ranges have an extra 0 
+\end{sol}
+
+\question Define a function $f:\R\ra\R$,
+\[
+  f(x) = \frac{\sin(x^2)}{y}
+\]
+Calculate the following,
+\begin{itemize}
+  \item The partial derivative with respect to $y, \displaystyle\frac{\p
+            f}{\p y}$
+        % solution goes here
+  \item The partial derivative with respect to $x, \displaystyle\frac{\p
+            f}{\p x}$
+        % solution goes here
+  \item The gradient vector $\nabla f(x, y)$.
+        % solution goes here
+\end{itemize}
+
+\begin{sol}
+\begin{enumerate}
+  \item $-y^{-2}sin(x^2)$
+  \item $\frac{2cos(x)x}{y}$
+  \item $[-y^{-2}sin(x^2), \frac{2cos(x)x}{y}]$
+\end{enumerate}
+\end{sol}
+
+\question Let $\vec{v_1} = [e, \pi, \sqrt{2}]$ and $\vec{v_2} = [1, 2, 0]$.
+What is the dot product $\vec{v_1} \cdot \vec{v_2}$? Please do not
+give an approximation.
+
+\begin{sol}
+  $(e)(1) + (\pi)(2) + 0 = e + 2\pi$
+\end{sol}
+
+\question We define a matrix of $n$ rows and $p$ columns with real values as
+$\mathbf{A} \in \R^{n\times p}$. We can think of $\mathbf{A}$ as
+having $n$ row vectors with the $i^\text{th} \leq n$ row vector
+being $\row(\mathbf{A})_i$. Similarly, we can think of
+$\mathbf{A}$ as having $p$ column vectors with the $j^\text{th}
+  \leq p$ column vector being $\col(\mathbf{X})_j$.
+
+Then matrix multiplication between $\mathbf{A} \in \R^{n\times p}$
+and $\mathbf{B} \in \R^{p\times m}$ is defined as,
+\[
+  \mathbf{AB} =
+  \begin{bmatrix}
+    \row(\mathbf{A})_1\col(\mathbf{X})_1 & \row(\mathbf{A})_1\col(\mathbf{X})_2 & \cdots & \row(\mathbf{A})_1\col(\mathbf{X})_m \\
+    \row(\mathbf{A})_2\col(\mathbf{X})_1 & \row(\mathbf{A})_2\col(\mathbf{X})_2 & \cdots & \row(\mathbf{A})_2\col(\mathbf{X})_m \\
+    \vdots                               & \vdots                               & \ddots & \vdots                               \\
+    \row(\mathbf{A})_n\col(\mathbf{X})_1 & \row(\mathbf{A})_n\col(\mathbf{X})_2 & \cdots & \row(\mathbf{A})_n\col(\mathbf{X})_m \\
+  \end{bmatrix}
+\]
+where $\row(\mathbf{A})_i\col(\mathbf{X})_j \in \R$ is a dot or
+inner product.
+
+Further, the transpose of $\mathbf{A} \in \R^{n\times p}$ is
+written as $\mathbf{A}^T \in \R^{p\times n}$ and is defined as,
+\[
+  \text{If } \mathbf{A}^T \text{ is the transpose of } \mathbf{A} \text{ then } \row(\mathbf{A})_i = \col(\mathbf{A}^T)_j.
+\]
+\begin{enumerate}[label=(\alph*)]
+  \item What must be true of the number of columns of $\mathbf{A}$ and
+        number of rows of $\mathbf{B}$ for $\mathbf{AB}$ to be defined?
+
+        \begin{sol}
+          The number of cols in A must match number of rows in B
+        \end{sol}
+
+  \item What information do the number of rows of $\mathbf{A}$ and number
+        of columns of $\mathbf{B}$ give you about the dimensions of the
+        product $\mathbf{AB}$?
+
+        \begin{sol}
+          AB will have the same amount of rows as A and the same amount of columns as B has
+        \end{sol}
+
+  \item For the two matrices bellow, give the product $\mathbf{AB}$.
+        \[
+          \mathbf{A} = \begin{bmatrix} 1 & 0 & 1 \\   2 & 1 & 1 \\   0 & 1 & 1 \\   1 & 1 & 2 \\   \end{bmatrix}, \quad
+          \mathbf{B} = \begin{bmatrix} 1 & 2 & 1 \\   2 & 3 & 1 \\   4 & 2 & 2 \\   \end{bmatrix}
+        \]
+        \begin{sol}
+          \[
+          \begin{bmatrix}
+            5 & 4 & 3 \\
+            8 & 9 & 5 \\
+            6 & 5 & 3 \\
+            11 & 9 & 6 \\
+          \end{bmatrix}
+          \]
+        \end{sol}
+  \item Prove that the matrix product is not a symmetric relation \ie
+        $\mathbf{AB} \neq \mathbf{BA}$. Hint: can you construct a small
+        counter example?
+        \begin{sol}
+          In 9.c, AB is a valid operation, but BA is not since B does not have as many rows as A has columns
+        \end{sol}
+  \item Prove that $\mathbf{(AB)}^T = \mathbf{B}^T\mathbf{A}^T$.
+    \begin{sol}
+      \[
+        (AB)^T = 
+        \begin{bmatrix}
+          5 & 8 & 6 & 11 \\ 
+          4 & 9 & 5 & 9 \\ 
+          3 & 5 & 3 & 6 \\ 
+        \end{bmatrix}
+        B^T A^T =
+        \begin{bmatrix}
+          5 & 8 & 6 & 11 \\ 
+          4 & 9 & 5 & 9 \\ 
+          3 & 5 & 3 & 6 \\ 
+        \end{bmatrix}
+      \]
+    \end{sol}
+
+  \item For $\mathbf{X} \in \R^{n\times p}, \beta \in \R^p, y \in \R^n$
+        prove that,
+        \[
+          \beta^T\mathbf{X}^Ty = y^T\mathbf{X}\beta
+        \]
+        \begin{sol}
+          
+        \end{sol}
+  \item Let $f(\beta) = \beta^T\beta$. Prove that the derivative $\frac{\D
+            f}{\D \beta} = 2\beta$.
+        % solution goes here
+\end{enumerate}
+\question For $x \in \R$ we have,
+\[
+  f(x) = \frac{x^4}{4} - \frac{x^3}{3}
+\]
+Give,
+\[
+  \min_xf(x) = \min_x\paren{\frac{x^4}{4} - \frac{x^3}{3}}
+\]
+Plot $f$ to double check your answer.
+
+\begin{sol}
+  $x=1$
+\end{sol}
+
+\question Let $x \sim \mathcal{N}(0, 1)$ be a normally distributed random
+variable with mean 0 and standard deviation 1. What is the
+likelihood that $x=\sqrt{2}$. Give an exact answer.
+
+% solution goes here
+
+\question The code snippet in listing %\ref{read}
+reads the plain text of the
+novel \textit{The Cosmic Computer} by the famous American science
+fiction writer Henry Beam Piper over the internet and saves it to
+a string variable \texttt{text}.
+
+\begin{lstlisting}[language=python, label=read, caption={A Python program to download the text of the \textit{The Cosmic Computer} by Piper.}]
+from urllib.request import urlopen as get
+
+url = 'https://www.gutenberg.org/files/20727/20727.txt'
+with get(url) as response:
+    text = response.read().decode('utf-8')
+
+print(text)
+\end{lstlisting}
+
+Write a Python program that prints out the ten most used words in
+the novel that have more than 5 letters. State your findings. Put
+your code in a file called \texttt{frequency.py}.
+
+% solution goes here
+
+\question Watch \href{https://www.youtube.com/watch?v=5jwV3zxXc8E}{Laziness
+  in Python - Computerphile} on YouTube.
+
+Implement the function \texttt{fibonacci(n)} in the code listing
+%\ref{fib}.
+
+\begin{lstlisting}[language=python, label=fib, caption={A Python 3 program to print out the first $n \geq 0$ Fibonacci numbers.}]
+def fibonacci(n):
+    # implement me
+
+for t in fibonacci(50):
+    print(t)
+\end{lstlisting}
+
+Run your program for $n=50$. What are the last five numbers
+printed? Put your code in a file called \texttt{fibonacci.py}.
+
+% solution goes here
+
+\section*{Submission Instructions}
+
+\begin{enumerate}
+  \item Submit a PDF that answers all the questions.
+  \item Submit Python files \eg \texttt{frequency.py} and
+        \texttt{fibonacci.py}.
+\end{enumerate}
+
+\end{document}
+
