@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.16)  16 JAN 2026 18:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.16)  16 JAN 2026 18:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -706,7 +706,7 @@ Package rerunfilecheck Info: File `mlhw1.out' has not changed.
 Here is how much of TeX's memory you used:
  20465 strings out of 475171
  339545 string characters out of 5767095
- 934059 words of memory out of 5000000
+ 935140 words of memory out of 5000000
  42957 multiletter control sequences out of 15000+600000
  606159 words of font info for 79 fonts, out of 8000000 for 9000
  175 hyphenation exceptions out of 8191
@@ -723,7 +723,7 @@ st/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf-dist/fonts/type1/public/l
 m/lmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/shar
 e/texmf-dist/fonts/type1/public/lm/lmtt8.pfb></usr/share/texmf-dist/fonts/type1
 /public/amsfonts/symbols/msbm10.pfb>
-Output written on mlhw1.pdf (3 pages, 289269 bytes).
+Output written on mlhw1.pdf (3 pages, 289651 bytes).
 PDF statistics:
  204 PDF objects out of 1000 (max. 8388607)
  165 compressed objects within 2 object streams
