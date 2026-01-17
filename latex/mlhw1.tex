@@ -218,12 +218,17 @@ written as $\mathbf{A}^T \in \R^{p\times n}$ and is defined as,
         \[
           \beta^T\mathbf{X}^Ty = y^T\mathbf{X}\beta
         \]
+
         \begin{sol}
-          
+          If we assume n = 1 and p = 1, then $\beta^T = \beta, X^T = X, y^T = y$ then $\beta^T\mathbf{X}^Ty = y^T\mathbf{X}\beta$ could be written as $\beta X y = y X \beta$ which is true
         \end{sol}
+
   \item Let $f(\beta) = \beta^T\beta$. Prove that the derivative $\frac{\D
             f}{\D \beta} = 2\beta$.
-        % solution goes here
+
+            \begin{sol}
+              if we assume $\beta = [x, x]$ then $\beta^T \beta = x^2 + x^2$ $\frac{df}{d\beta}= 2x + 2x$ which is equivelent to $2\beta$
+            \end{sol}
 \end{enumerate}
 \question For $x \in \R$ we have,
 \[
@@ -265,7 +270,18 @@ Write a Python program that prints out the ten most used words in
 the novel that have more than 5 letters. State your findings. Put
 your code in a file called \texttt{frequency.py}.
 
-% solution goes here
+\begin{sol}
+Merlin 129
+father 108
+around 79
+didn't 77
+Maxwell 71
+anything 66
+Project 64
+people 62
+things 61
+something 60
+\end{sol}
 
 \question Watch \href{https://www.youtube.com/watch?v=5jwV3zxXc8E}{Laziness
   in Python - Computerphile} on YouTube.
@@ -284,7 +300,13 @@ for t in fibonacci(50):
 Run your program for $n=50$. What are the last five numbers
 printed? Put your code in a file called \texttt{fibonacci.py}.
 
-% solution goes here
+\begin{sol}
+1134903170
+1836311903
+2971215073
+4807526976
+7778742049
+\end{sol}
 
 \section*{Submission Instructions}
 
