@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.16)  16 JAN 2026 18:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.16)  17 JAN 2026 17:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -669,13 +669,13 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 71.
+(Font)              <12> on input line 72.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 71.
+(Font)              <8> on input line 72.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 71.
+(Font)              <6> on input line 72.
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-95.
+96.
  (/usr/share/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -690,9 +690,9 @@ st/fonts/enc/dvips/lm/lm-rmtt.enc}]
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 259.
+nput line 262.
 LaTeX Font Info:    Font shape `OT1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/lmtt/b/n' tried instead on input line 260.
+(Font)              Font shape `OT1/lmtt/b/n' tried instead on input line 263.
 
 
 [3{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rmsc.enc}] (./mlhw1.aux)
@@ -706,7 +706,7 @@ Package rerunfilecheck Info: File `mlhw1.out' has not changed.
 Here is how much of TeX's memory you used:
  20465 strings out of 475171
  339545 string characters out of 5767095
- 935140 words of memory out of 5000000
+ 936332 words of memory out of 5000000
  42957 multiletter control sequences out of 15000+600000
  606159 words of font info for 79 fonts, out of 8000000 for 9000
  175 hyphenation exceptions out of 8191
@@ -715,18 +715,19 @@ Here is how much of TeX's memory you used:
 t/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/l
 m/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/shar
 e/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1
-/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></us
-r/share/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf-dist/fonts/
-type1/public/lm/lmri12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.
-pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf-di
-st/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf-dist/fonts/type1/public/l
-m/lmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/shar
-e/texmf-dist/fonts/type1/public/lm/lmtt8.pfb></usr/share/texmf-dist/fonts/type1
-/public/amsfonts/symbols/msbm10.pfb>
-Output written on mlhw1.pdf (3 pages, 289651 bytes).
+/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></us
+r/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/
+type1/public/lm/lmr9.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pf
+b></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dis
+t/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/
+lmtk10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/
+texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/share/texmf-dist/fonts/type1/
+public/lm/lmtt8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/
+msbm10.pfb>
+Output written on mlhw1.pdf (3 pages, 305225 bytes).
 PDF statistics:
- 204 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
+ 209 PDF objects out of 1000 (max. 8388607)
+ 168 compressed objects within 2 object streams
  43 named destinations out of 1000 (max. 500000)
  113 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -17,5 +17,5 @@ for word in text.split(" "):
             score[word] += 1
 
 # Get top 5 most used words
-for word in sorted(score, key=score.get, reverse=True)[:10]:
+for word in sorted(score, key=score.get, reverse=True)[0:10]:
     print(word, score[word])
