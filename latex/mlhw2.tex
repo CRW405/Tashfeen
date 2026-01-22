@@ -1,0 +1,157 @@
+\documentclass{homework}
+\author{Wiyninger, Caleb}  % uncomment with your name
+\class{CSCI 3203: Tashfeen's Machine Learning I}
+\title{Homework 2}
+\address{
+  Oklahoma City University,
+  Petree College of Arts \& Sciences,
+  Computer Science
+}
+\date{\today}  % Uncomment with your semester
+
+\begin{document} \maketitle
+ wv
+You're only allowed to use the standard built-in Python 3
+libraries with the exception of Numpy and Matplotlib.
+
+\question Plot the following trigonometric functions for $-5\pi \leq x \leq 5\pi$.
+\[
+  f(x) = x\sin^2(x), \quad  g(x) = -x\sin^2(x)
+\]
+\begin{itemize}
+  \item The title of the plot should read ``Trigonometric Functions.''
+  \item The $x$--axis label of the plot should read ``$x$--axis.''
+  \item The $y$--axis label of the plot should read ``$y$--axis.''
+  \item The legends should appropriately denote the different functions by their definition.
+  \item The graphs should have smooth continuos curves.
+\end{itemize}
+
+\question Download and save the novel
+\href{https://www.gutenberg.org/files/20727/20727.txt}{``The Cosmic
+  Computer''} by Piper. Read the saved text file into Python and plot
+a bar graph of the character frequency (case insensitive).
+
+\begin{itemize}
+  \item The title of the plot should read `Character Frequency in ``The Cosmic Computer'' by Piper.'
+  \item The $x$--axis label of the plot should read ``Alphabet.''
+  \item The $y$--axis label of the plot should read ``Frequency.''
+  \item The bars should be sorted in ascending order.
+\end{itemize}
+
+\question Using \texttt{matplotlib.pyplot.imshow} and an eight by eight binary Numpy array, plot the chess board pattern.
+
+\begin{itemize}
+  \item The $x$--ticks should be letters from A to H, A being at the left.
+  \item The $y$--ticks should be numbers from 1 to 8, one being at the bottom.
+  \item The title should be ``Chess Board Pattern.''
+\end{itemize}
+
+\question Following are the two matrices from the last homework,
+\[
+  \mathbf{A} = \begin{bmatrix} 1 & 0 & 1 \\   2 & 1 & 1 \\   0 & 1 & 1 \\   1 & 1 & 2 \\   \end{bmatrix}, \quad
+  \mathbf{B} = \begin{bmatrix} 1 & 2 & 1 \\   2 & 3 & 1 \\   4 & 2 & 2 \\   \end{bmatrix}
+\]
+Use Numpy to multiply them and print the product $\mathbf{AB}$. Does it match with the one you carried out by hand?
+
+\question The Gregory series is given as,
+\[
+  f(n) = \sum_{i=1}^{i=n}\frac{4(-1)^{i+1}}{2i-1}=\frac{4}{1}-\frac{4}{3}+\frac{4}{5}-\cdots+\frac{4(-1)^{n+1}}{2n-1}
+\]
+\begin{enumerate}
+  \item Without using any loops \ie using vectorised operations over Numpy arrays, plot the following values,
+        \[
+          \{(n, f(n)) : 1 \leq n \leq 100\}
+        \]
+  \item Plot the following error curve,
+        \[
+          \{(n, (\pi - f(n))^2) : 1 \leq n \leq 100\}
+        \]
+\end{enumerate}
+Label the axis and title each plot appropriately. What is $\lim_{n\ra\infty}f(n)$?
+
+% solution goes here
+
+\question Consider the following study results in table \ref{labels},
+
+\tbl<labels>{Real and Predicted Labels}{
+  Point & Real  & Predicted \\
+  1     & $-$     & $+$         \\
+  2     & $-$     & $-$         \\
+  3     & $-$     & $-$         \\
+  4     & $-$     & $+$         \\
+  5     & $+$     & $-$         \\
+  6     & $+$     & $+$         \\
+  7     & $+$     & $+$         \\
+  8     & $+$     & $+$         \\
+}
+
+State all the points that are,
+
+\begin{enumerate}
+  \item True Negatives
+        % solution goes here
+  \item True Positives
+        % solution goes here
+  \item False Positives
+        % solution goes here
+  \item False Negatives
+        % solution goes here
+\end{enumerate}
+
+\question Give the confusion matrix for table \ref{labels}.
+\tbl<mat>{Binary Confustion Matrix}{
+  & Predicted $-$ & Predicted $+$  \\
+  Real $-$    & TN            & FP         \\
+  Real $+$    & FN            & TP         \\
+}
+
+% solution goes here
+
+\question Again, for table \ref{labels}, give the following in exact fractions.
+\begin{enumerate}
+  \item Baseline Accuracy
+  \item Accuracy
+        \[
+          \frac{\text{Total Correctly Classified}}{\text{Total Examples}}
+        \]
+  \item Precision
+        \[
+          \frac{\text{True Positives}}{\text{Total Examples Classified as Positive}}
+        \]
+  \item Recall
+        \[
+          \frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}}
+        \]
+  \item F1 Score
+        \[
+          \frac{2\text{TP}}{2\text{TP} + \text{FP} + \text{FN}}
+        \]
+\end{enumerate}
+
+% solution goes here
+
+\question Often (but not always) how are precision and recall related?
+
+% solution goes here
+
+\question Between precision and recall, which is a better metric for,
+\begin{enumerate}
+  \item Predicting good restaurants.
+  \item Predicting cancer.
+\end{enumerate}
+
+% solution goes here
+
+\question Between precision and recall, which metric is used in the Receiver Operator's Curve (ROC). What does the area under this curve tell us about a prospective classifier?
+
+% solution goes here
+
+\section*{Submission Instructions}
+
+\begin{enumerate}
+  \item Submit a PDF that answers all the questions and includes any plots that the assignment asks for. Circle and/emphasize your final answer wherever possible.
+  \item Submit a Python file \eg \texttt{plot.py} that generates all the plots one by one.
+\end{enumerate}
+
+\end{document}
+
