@@ -34,7 +34,7 @@ sorted_pairs = sorted(zip(x, y), key=lambda pair: pair[1])
 x, y = zip(*sorted_pairs)
 
 plt.bar(x, y)
-plt.title("Character Frequency")
+plt.title('Character Frequency in "The Cosmic Computer"')
 plt.xlabel("Alphabet")
 plt.ylabel("Frequency")
 plt.legend()
