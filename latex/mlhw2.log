@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.16)  21 JAN 2026 19:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.16)  23 JAN 2026 11:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -545,8 +545,11 @@ File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count324
 \l__pdf_internal_box=\box60
+) (./mlhw2.aux
+
+LaTeX Warning: Label `mat' multiply defined.
+
 )
-No file mlhw2.aux.
 \openout1 = `mlhw2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -569,7 +572,7 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
 2.
-(/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
+ (/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
@@ -660,6 +663,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring ON on input line 12.
+ (./mlhw2.out)
+(./mlhw2.out)
 \@outlinefile=\write3
 \openout3 = `mlhw2.out'.
 
@@ -674,8 +679,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 17.
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
 41.
-
-(/usr/share/texmf-dist/tex/latex/lm/ot1lmtt.fd
+ (/usr/share/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
@@ -684,16 +688,6 @@ ts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.e
 nc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-di
 st/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-
 mathex.enc}]
-
-LaTeX Warning: Reference `labels' on page 2 undefined on input line 74.
-
-
-LaTeX Warning: Reference `labels' on page 2 undefined on input line 101.
-
-
-LaTeX Warning: Reference `labels' on page 2 undefined on input line 110.
-
-
 
 [2{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rmsc.enc}]
 
@@ -704,28 +698,19 @@ L3 programming layer <2025-01-18>
  ***********
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `mlhw2.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `mlhw2.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  33281AFFA582B04DD7FF3623FEB2F310;1287.
+Package rerunfilecheck Info: File `mlhw2.out' has not changed.
+(rerunfilecheck)             Checksum: 8EDCBB73894CD10FBEB6DE19FB56755C;1288.
  ) 
 Here is how much of TeX's memory you used:
- 19993 strings out of 475171
- 335192 string characters out of 5767095
- 726157 words of memory out of 5000000
- 42519 multiletter control sequences out of 15000+600000
+ 20023 strings out of 475171
+ 335556 string characters out of 5767095
+ 726368 words of memory out of 5000000
+ 42534 multiletter control sequences out of 15000+600000
  601007 words of font info for 75 fonts, out of 8000000 for 9000
  175 hyphenation exceptions out of 8191
- 99i,10n,107p,605b,464s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,10n,107p,605b,651s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dis
 t/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/l
 m/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/shar
@@ -734,10 +719,10 @@ e/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1
 r/share/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf-dist/fonts/
 type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.p
 fb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on mlhw2.pdf (3 pages, 181852 bytes).
+Output written on mlhw2.pdf (3 pages, 184087 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
- 22 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 157 PDF objects out of 1000 (max. 8388607)
+ 128 compressed objects within 2 object streams
+ 31 named destinations out of 1000 (max. 500000)
+ 97 words of extra memory for PDF output out of 10000 (max. 10000000)
 

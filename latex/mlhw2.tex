@@ -10,7 +10,6 @@
 \date{\today}  % Uncomment with your semester
 
 \begin{document} \maketitle
- wv
 You're only allowed to use the standard built-in Python 3
 libraries with the exception of Numpy and Matplotlib.
 
@@ -70,6 +69,9 @@ Use Numpy to multiply them and print the product $\mathbf{AB}$. Does it match wi
 Label the axis and title each plot appropriately. What is $\lim_{n\ra\infty}f(n)$?
 
 % solution goes here
+\begin{sol}
+  somwhere between 3 and 3.2
+\end{sol}
 
 \question Consider the following study results in table \ref{labels},
 
@@ -98,6 +100,15 @@ State all the points that are,
         % solution goes here
 \end{enumerate}
 
+\begin{sol}
+  \begin{enumerate}
+    \item 2, 3
+    \item 6,7,8
+    \item 1,4
+    \item 5
+  \end{enumerate}
+\end{sol}
+
 \question Give the confusion matrix for table \ref{labels}.
 \tbl<mat>{Binary Confustion Matrix}{
   & Predicted $-$ & Predicted $+$  \\
@@ -105,7 +116,13 @@ State all the points that are,
   Real $+$    & FN            & TP         \\
 }
 
-% solution goes here
+\begin{sol}
+  \tbl<mat>{Confusion Matrix}{
+    & Predicted $-$ & Predicted $+$  \\
+    Real $-$    & 2            & 2         \\
+    Real $+$    & 1            & 3         \\
+  }
+\end{sol}
 
 \question Again, for table \ref{labels}, give the following in exact fractions.
 \begin{enumerate}
@@ -129,10 +146,21 @@ State all the points that are,
 \end{enumerate}
 
 % solution goes here
+\begin{sol}
+  \begin{enumerate}
+    \item 5 / 8 
+    \item 3 / 5 
+    \item 3 / 4
+    \item $2(3) / 2(3) + 2 + 1 = 6 / 9 = 2 / 3$
+  \end{enumerate}
+\end{sol}
 
 \question Often (but not always) how are precision and recall related?
 
 % solution goes here
+\begin{sol}
+  Precision is how overall correct you are and recall is how many true positives you catch. If you focus on recall, you catch more true positives but also end up with more false positives which is less precise but may be better depending on what your predicting.
+\end{sol}
 
 \question Between precision and recall, which is a better metric for,
 \begin{enumerate}
@@ -141,10 +169,16 @@ State all the points that are,
 \end{enumerate}
 
 % solution goes here
+\begin{sol}
+  precision is better for rating non important things so that you get accurate info on something like restaurant ratings. For something important like cancer, its much more important to get as many positives as possible even if it means some may be false, its better to be safe than sorry.
+\end{sol}
 
 \question Between precision and recall, which metric is used in the Receiver Operator's Curve (ROC). What does the area under this curve tell us about a prospective classifier?
 
 % solution goes here
+\begin{sol}
+  More area under the curve means more true positives.
+\end{sol}
 
 \section*{Submission Instructions}
 
