@@ -1,0 +1,327 @@
+\documentclass{homework}
+\author{Wiyninger, Caleb}  % uncomment with your name
+\class{CSCI 3203: Tashfeen's Machine Learning I}
+\title{Homework 3}
+\address{
+  Oklahoma City University,
+  Petree College of Arts \& Sciences,
+  Computer Science
+}
+
+\renewcommand\P{\mathbf{P}}
+\newcommand\Y{\mathcal{Y}}
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+\newcommand\titaniccsv{\href{%
+  https://github.com/alexisperrier/packt-aml/blob/master/ch4/titanic.csv%
+}{%
+  link%
+}%
+}
+\newcommand\ports{(Cherbourg; Queenstown; Southampton)}
+
+\begin{document} \maketitle
+
+\section{Probability and Conditional Probability}
+
+You roll a pair of six-sided dice towards faces $a$ and $b$. If asked
+to calculate the probability of rolling a twelve (sum of the two
+rolls),
+\[
+  \text{Probabilty that }(a+b=12)
+\]
+in notation,
+\[
+  \P(a+b=12)
+\]
+you might answer,
+\[
+  \P(a+b=12) = \P(a = 6) \text{ and } \P(b = 6) = \frac{1}{6^2}
+\]
+What if you are asked the same question, $\P(a+b=12)$ given that
+$b < 6$? You might reason that, $b \leq 5$ and $a+5=12 \Ra a =
+  7$. Which as we know is impossible. Therefore,
+\[
+  \P(a+b=12 \mid b < 6) = 0
+\]
+
+\section{Bayes' Theorem}
+
+The English polymath Thomas Bayes figured out that in general the
+probability that event $a$ occurs given that event $b$ has occurred or
+in other words, the probability that $a$ will be true given that $b$
+is true can be written as the following,
+\[
+  \text{Probability of } a \text{ given } b =
+  \P(a \mid b) = \frac{\P(b \mid a)\P(a)}{\P(b)}
+\]
+The above is referred to as the Bayes' Theorem. We can use the Bayes'
+Theorem as one of our \textit{Data Science} models. Details follow.
+
+\section{Na\"ive Bayes' Classification}
+
+Assume that we are trying to learn a model $f(x) \in \{0, 1\}$ for
+\textit{binary classification}. We might try approximating $f(x)$ as
+$f'(x)$ by letting $f'(x)$ equal to $0$ or $1$ depending upon
+whichever is more probable given $x$,
+\[
+  f'(x) =
+  \begin{cases}
+    0, & \text{if } \P(y=1 \mid x) \leq \P(y=0 \mid x) \\
+    1, & \text{if } \P(y=1 \mid x) > \P(y=0 \mid x)
+  \end{cases}
+\]
+We can simplify the above as,
+\[
+  f'(x_i) = \P(y=1 \mid x) > \P(y=0 \mid x)
+\]
+This works for binary classification, but we may use Bayes' Theorem
+for any multi-class classification. Let $\Y = \{0, 1, 2,\hdots, n\}$
+be the set of all possible outcomes \ie $f(x) \in \Y$, then we let
+$f'(x) = y_j$ such that for all $k \neq j$ we know that,
+\[
+  \P(y=y_j \mid x) >  \P(y=y_k \mid x)
+\]
+or simply,
+\[
+  \P(y_j \mid x) >  \P(y_k \mid x)
+\]
+
+In other words, $f'(x) = y_j$ such that $\P(y_j \mid x)$ is maximum
+(the most probable $y_j$ given $x$). This is often written as (see
+question \ref{argmax}),
+\[
+  f'(x) = \argmax_{y\in \Y}\P(y\mid x)
+\]
+
+The crux of the matter is now that how do we compute $\P(y\mid x)$. We
+use the Bayes' Theorem!
+\begin{align*}
+  f'(x) & = \argmax_{y\in \Y}\P(y\mid x)                             \\
+        & = \argmax_{y\in \Y}\paren{\frac{\P(x \mid y)\P(y)}{\P(x)}} \\
+        & = \argmax_{y\in \Y}\paren{\P(x \mid y)\P(y)}
+\end{align*}
+$\P(x)$ is disregarded because it's value does not change the
+$\argmax_{y\in \Y}$ since it stays the same over all $y$. See
+questions \ref{argmax1} and \ref{argmax2}.
+
+The above model works when $x$ is a scaler, but what if
+$\mathbf{x} = [x_1, x_2, x_3, \hdots, x_n]^T$? The model becomes,
+\begin{align*}
+  f'(x) & = \argmax_{y\in \Y}\paren{\P(\mathbf{x} \mid y)\P(y)} \\
+  f'(x) & = \argmax_{y\in \Y}\paren{\P(y)\P(\mathbf{x} \mid y)} \\
+        & = \argmax_{y\in \Y}\paren{\P(y)\P(
+  x_1, x_2, x_3, \hdots, x_n \mid y)}                           \\
+        & = \argmax_{y\in \Y}\paren{\P(y)\P(
+    x_1 \text{ and }
+    x_2 \text{ and }
+    x_3 \text{ and }
+    \hdots \text{ and }
+    x_n \mid y
+    )}
+\end{align*}
+Calculating
+$\P(x_1 \text{ and } x_2 \text{ and } x_3 \text{ and } \hdots \text{
+    and } x_n \mid y)$ may take $\O(2^n)$ unless we cut our losses and
+assume (na\"ively) that $x_i$'s are \textit{statistically}
+independent. In which case,
+\begin{align*}
+  \P(\mathbf{x}\mid y)
+   & = \P(
+  x_1 \text{ and }
+  x_2 \text{ and }
+  x_3 \text{ and }
+  \hdots \text{ and }
+  x_n \mid y)                      \\
+   & = \P(x_1 \mid y) \times
+  \P(x_2 \mid y) \times
+  \P(x_3 \mid y) \times
+  \hdots \times
+  \P(x_n \mid y)                   \\
+   & = \prod_{i=1}^n\P(x_i \mid y)
+\end{align*}
+Hence, our na\"ive bayes model,
+\[
+  f'(x) = \argmax_{y\in \Y}\paren{\P(y) \times \prod_{i=1}^n\P(x_i \mid y)}
+\]
+
+\section{Numerical Stability}
+As computer scientists, we know that multiplying a lot of small
+numbers results in underflow\footnote{A type of floating point error.}
+errors which may greatly impact the argument maximum function (see
+question \ref{underflow}). Therefore, here we need to be a little
+creative with $\ln(x)$.
+\begin{align*}
+  f'(x)
+   & = \argmax_{y\in \Y}
+  \ln\paren{\P(y)\prod_{i=1}^n\P(x_i \mid y)} \\
+   & = \argmax_{y\in \Y}
+  \paren{\ln \P(y) + \sum_{i=1}^n\ln(\P(x_i \mid y))}
+   &
+   & \ln(ab) = \ln(a) + \ln(b)                \\
+\end{align*}
+
+\question\label{argmax} What is
+$\argmax_{y\in \Y} \brk{100_0, 999_1, 24_2, 3.5_3, 4_4, 7_5}$? Simply
+state the index of the maximum value.
+
+\begin{sol}
+  5
+\end{sol}
+
+\question\label{argmax1} Give,
+\[
+  \argmax_{y\in \Y} \brk{
+    \paren{\frac{100}{4}}_0,
+    \paren{\frac{999}{4}}_1,
+    \paren{\frac{24}{4}}_2,
+    \paren{\frac{3.5}{4}}_3,
+    \paren{\frac{4}{4}}_4,
+    \paren{\frac{7}{4}}_5
+  }
+\]
+Did the answer change from question \ref{argmax}?
+
+\begin{sol}
+  5, no
+\end{sol}
+
+\question\label{argmax2} If we write,
+\[
+  \argmax_{y\in \Y}
+  \brk{\paren{\frac{100}{c}}_0,
+    \paren{\frac{999}{c}}_1,
+    \paren{\frac{24}{c}}_2,
+    \paren{\frac{3.5}{c}}_3,
+    \paren{\frac{4}{c}}_4,
+    \paren{\frac{7}{c}}_5
+  }
+\]
+for some positive $c$. Does that change the answer from \ref{argmax}?
+
+\begin{sol}
+  still 5 since everything is scaled equally
+\end{sol}
+
+\question\label{underflow} For this question, we'll use Numpy's
+function argmax \eg \texttt{np.argmax}. Numpy's argmax function
+returns the index of the first value when given two equal values. For
+example,
+\[
+  \texttt{np.argmax([1, 1])} = 0
+\]
+\begin{enumerate}
+  \item What is $(1-0.55)/0.45$?
+        % solution goes here
+  \item Give \texttt{np.argmax([1, 1])}.
+        % solution goes here
+  \item Give \texttt{np.argmax([(1-0.55)/0.45, 1])}.
+        % solution goes here
+  \item Was \texttt{np.argmax([1, 1]) = np.argmax([(1-0.55)/0.45, 1])}?
+        Should they be equal? What happened?
+        % solution goes here
+\end{enumerate}
+
+\question Consider the following data,
+\tbl<data>{Make-believe student performance data.}{
+  Student ID & Midterm $x_0$ & Hours Studied $x_1$ & Final Grade $y$ \\
+  1          & B             & 16                  & Passed          \\
+  2          & B             & 13                  & Passed          \\
+  3          & C             & 13                  & Passed          \\
+  4          & A             & 16                  & Passed          \\
+  5          & D             & 9                   & Failed          \\
+  6          & A             & 5                   & Passed          \\
+  7          & F             & 5                   & Failed          \\
+  8          & F             & 0                   & Failed          \\
+}
+
+Assume that the midterm grade and the hours studied columns are
+statistically independent. Give exact answers $a/b$ for
+$a \in \N \ni b$ by counting frequencies in the table \ref{data}.
+\begin{enumerate}
+  \item What is $\P(y = \text{Passed})$ or $\P(\text{Passed})$.
+        % solution goes here
+  \item What is $\P(\text{Failed})$.
+        % solution goes here
+  \item What is the probability that a student got an F in the midterm
+        $\P(x_0 = F)$?
+        % solution goes here
+  \item What is the probability that a student got an F in the midterm
+        given they failed the class \ie
+        $\P(x_0=\text{F} \mid y = \text{Failed})$.
+        % solution goes here
+  \item What is $\P(y = \text{Failed} \mid x_0=\text{F})$
+        % solution goes here
+\end{enumerate}
+
+\question Download the cleaned\footnote{Commas removed from the names
+  column so it can be read directly as a CSV.} Titanic dataset from
+this \titaniccsv{}. The meaning of the columns are given in table
+\ref{titanic}.
+
+\tbl<titanic>{Titanic dataset column descriptions}{
+  $i^\text{th}$ Column & Column Header & Header Description                \\
+  0                    & pclass        & Passenger Class                   \\
+  1                    & survival      & Survival(0 = No; 1 = Yes)         \\
+  2                    & name          & Name                              \\
+  3                    & sex           & Sex                               \\
+  4                    & age           & Age                               \\
+  5                    & sibsp         & Number of Siblings/Spouses Aboard \\
+  6                    & parch         & Number of Parents/Children Aboard \\
+  7                    & ticket        & Ticket Number                     \\
+  8                    & fare          & Passenger Fare (British pound)    \\
+  9                    & cabin         & Cabin                             \\
+  10                   & embarked      & Port of Embarkation \ports{}      \\
+  11                   & boat          & Lifeboat                          \\
+  12                   & body          & Body Identification Number        \\
+  13                   & home.dest     & Home/Destination                  \\
+}
+\begin{enumerate}
+  \item Looking at the columns, pick four that you think will be the
+        most important in the task of predicting whether someone survived on
+        Titanic. Which four did you pick? Give their column header names.
+
+        % solution goes here
+  \item Once we have downloaded the comma separated file containing
+        the Titanic's passengers data, we still need to pick the relevant
+        columns, encode qualitative data, drop the rows with missing fields
+        and finally split the dataset in training and testing subsets. All
+        of this is done for you in
+        \href{https://tashfeen.org/s/ml/data.py}{\texttt{data.py}}.
+        Download and save this python file in the same directory as your
+        \texttt{titanic.csv}. What is the baseline accuracy of the made
+        testing subset? Are the testing labels balanced?
+
+        % solution goes here
+  \item Use the data to find out what percentage of men survived on
+        Titanic? What percentage of women?
+
+        % solution goes here
+  \item Finish the
+        \href{https://tashfeen.org/s/ml/stub.py}{Python class
+          (linked)} implementing the \textit{Na\"ive Bayes'
+          Classifier}. Name this file \texttt{bayes.py}. What accuracy does
+        \texttt{python3 bayes.py} print to the console?
+
+        % solution goes here
+  \item Use the model you created to predict whether you would have
+        survived Titanic. You'll need to read the \texttt{data.py} and table
+        \ref{titanic} to construct a data-point for yourself. State your
+        findings. Put the code for this task within a file
+        \texttt{<lastname>.py}. E. g., for the professor this is
+        \texttt{tashfeen.py}.
+
+        % solution goes here
+\end{enumerate}
+
+\section*{Submission Instructions}
+\begin{enumerate}
+  \item Submit a PDF that answers all the questions that the
+        assignment asks. Circle and/emphasize your final answer wherever
+        possible.
+  \item Submit your \texttt{bayes.py}.
+  \item Submit your \texttt{<lastname>.py}.
+\end{enumerate}
+
+\end{document}
+
