@@ -222,6 +222,15 @@ example,
         % solution goes here
 \end{enumerate}
 
+\begin{sol}
+  \begin{enumerate}
+    \item 1, but python says 0.999999999999999
+    \item 0
+    \item 1
+    \item a floating point error means that $(1-.55)/.45=0.99999999999$ which means that 1 is the max arg in this system
+  \end{enumerate}
+\end{sol}
+
 \question Consider the following data,
 \tbl<data>{Make-believe student performance data.}{
   Student ID & Midterm $x_0$ & Hours Studied $x_1$ & Final Grade $y$ \\
@@ -254,6 +263,16 @@ $a \in \N \ni b$ by counting frequencies in the table \ref{data}.
         % solution goes here
 \end{enumerate}
 
+\begin{sol}
+  \begin{enumerate}
+    \item 5/8
+    \item 3/8
+    \item 2/8 = 1/4
+    \item 2/3
+    \item 1
+  \end{enumerate}
+\end{sol}
+
 \question Download the cleaned\footnote{Commas removed from the names
   column so it can be read directly as a CSV.} Titanic dataset from
 this \titaniccsv{}. The meaning of the columns are given in table
@@ -281,7 +300,11 @@ this \titaniccsv{}. The meaning of the columns are given in table
         most important in the task of predicting whether someone survived on
         Titanic. Which four did you pick? Give their column header names.
 
-        % solution goes here
+        \begin{sol}
+          All you really need is just survival, body, or boat.
+
+          but if you couldnt choose those, then you could choose sex, age, sibsp, and parch
+        \end{sol}
   \item Once we have downloaded the comma separated file containing
         the Titanic's passengers data, we still need to pick the relevant
         columns, encode qualitative data, drop the rows with missing fields
@@ -292,18 +315,30 @@ this \titaniccsv{}. The meaning of the columns are given in table
         \texttt{titanic.csv}. What is the baseline accuracy of the made
         testing subset? Are the testing labels balanced?
 
-        % solution goes here
+        \begin{sol}
+          50\%, yes
+        \end{sol}
   \item Use the data to find out what percentage of men survived on
         Titanic? What percentage of women?
 
-        % solution goes here
+        \begin{sol}
+          
+men:  587 
+men survived:  110 
+women:  358 
+women survived:  267 
+men\%:  11.64021164021164 
+women\%:  28.253968253968253
+        \end{sol}
   \item Finish the
         \href{https://tashfeen.org/s/ml/stub.py}{Python class
           (linked)} implementing the \textit{Na\"ive Bayes'
           Classifier}. Name this file \texttt{bayes.py}. What accuracy does
         \texttt{python3 bayes.py} print to the console?
 
-        % solution goes here
+        \begin{sol}
+          0.77
+        \end{sol}
   \item Use the model you created to predict whether you would have
         survived Titanic. You'll need to read the \texttt{data.py} and table
         \ref{titanic} to construct a data-point for yourself. State your
