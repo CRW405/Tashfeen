@@ -1,0 +1,181 @@
+\documentclass{homework}
+\author{Wiyninger, Caleb}  % uncomment with your name
+\class{CSCI 3203: Tashfeen's Machine Learning I}
+\title{Homework 4}
+\address{
+  Oklahoma City University,
+  Petree College of Arts \& Sciences,
+  Computer Science
+}
+
+\newcommand\csv{\href{%
+    https://github.com/selva86/datasets/blob/master/BostonHousing.csv%
+  }{\texttt{BoustonHousing.csv}}}
+
+\begin{document} \maketitle
+
+You're \textit{not allowed} to use any libraries other than Numpy or
+Matplotlib.
+
+We start by reminding ourselves of the variables from the class where
+$x_i^T \in \R^p$ is a single data point in the data set and
+$y_i\in \R$ is the corresponding label.
+\[
+  x_i =
+  \begin{bmatrix}
+    t_1 \\ \vdots \\ t_{p-1} \\ 1
+  \end{bmatrix},
+  \quad
+  X_{(n, p)} =
+  \begin{bmatrix}
+    x^T_1 \\ \vdots \\ x^T_n
+  \end{bmatrix},
+  \quad
+  \beta_{(p, 1)} =
+  \begin{bmatrix}
+    \beta_1 \\ \vdots \\ \beta_p
+  \end{bmatrix},
+  \quad
+  y_{(n, 1)} =
+  \begin{bmatrix}
+    y_1 \\ \vdots \\ y_n
+  \end{bmatrix}
+\]
+Therefore, the linear regression model under the appropriate
+assumptions mentioned in class is,
+\[
+  f(x) = x^T\beta
+\]
+
+Using the quadratic error function we get,
+\begin{align*}
+  J(\beta) & = \sum_{i=1}^n(f(x_i) - y_{i})^2                    \\
+           & = \sum_{i=1}^n(x_i^T\beta - y_{i})^2                \\
+           & = (X\beta - y)^T(X\beta - y)                        \\
+           & = (\beta^TX^T - y^T)(X\beta - y)                    \\
+           & = \beta^TX^TX\beta - \beta^TX^Ty - y^TX\beta - y^Ty \\
+\end{align*}
+Note that,
+\[
+  \beta^TX^Ty = (y^TX\beta)^T
+  \text{ with dimensions }
+  (1, p) \cdot (p, n) \cdot (n, 1) = (1, 1)
+\]
+Therefore $ \beta^TX^TX\beta - \beta^TX^Ty - y^TX\beta - y^Ty$ is
+equal to,
+\[
+  \beta^TX^TX\beta - 2\beta^TX^Ty - y^Ty
+\]
+
+In order to minimise this error function in terms of $\beta$ we take
+the partial derivative.
+\begin{align*}
+  \frac{\p J(\beta)}{\p \beta}
+   & = \frac{\p}{\p \beta}\paren{\beta^TX^TX\beta - 2\beta^TX^Ty - y^Ty} \\
+   & = 2X^TX\beta - 2X^Ty - 0                                            \\
+   & = 2X^TX\beta - 2X^Ty
+\end{align*}
+Set the derivative to zero and solve for $\beta$,
+\begin{align*}
+  \frac{\p J(\beta)}{\p \beta} & = 2X^TX\beta - 2X^Ty \\
+  2X^TX\beta - 2X^Ty           & = 0                  \\
+  2X^TX\beta                   & = 2X^Ty              \\
+  X^TX\beta                    & = X^Ty               \\
+  \beta                        & = (X^TX)^{-1}X^Ty    \\
+\end{align*}
+
+\question What is wrong with the following approach of solving the
+derivative of the quadratic error function $J(\beta)$ for $\beta$
+after setting it to zero?
+\begin{align*}
+  2X^TX\beta - 2X^Ty & = 0                                           \\
+  2X^TX\beta         & = 2X^Ty                                       \\
+  X^TX\beta          & = X^Ty    &  & \text{Multiply by } (X^T)^{-1} \\
+  X\beta             & = y                                           \\
+  \beta              & = X^{-1}y                                     \\
+\end{align*}
+
+\begin{sol}
+  Because if $(X^T)^{-1}$ exists than your algorithm is too bad to bother with
+\end{sol}
+
+\question Code listing \ref{line} generates and plots some linear
+data. Using the equation,
+\[
+  \beta = (X^TX)^{-1}X^Ty
+\]
+plot the line of best fit in the same figure. Place the code for this
+question in a file called \texttt{bestfit.py} and give the plot.
+
+% \lstinputlisting[
+%   language={Python},
+%   caption={Linear data generation.},
+%   label=line]
+% {./code/line.py}
+
+\begin{sol}
+  \begin{figure}
+    \includegraphics{../machine learning/ml4/bestfit.png}
+  \end{figure}
+\end{sol}
+
+\question Read the two discussions bellow,
+\begin{enumerate}
+  \item \href{https://tinyurl.com/y9w2e2gr}
+        {racist data destruction?}
+  \item \href{https://news.ycombinator.com/item?id=34189684}
+        {Boston housing price dataset was removed from scikit-learn 1.2}
+\end{enumerate}
+Do you think the data set should have been removed even if it was
+unethical? Do you think the original authors were actually pushing
+systematic racism or just accounting for it in their data? Discuss
+your thoughts in one paragraph.
+
+\begin{sol}
+  I have no way of knowing the intention behind the authors without them just saying it and being honest.
+  Racists probably existed in the 70's so it would be a data point that would impact housing prices for racist populations.
+  However, stating that black people drive down housing prices is certainly a statement.
+  Furthermore, the obscuring of the raw data is incredibly suspicious and makes me lean towards them being racist.
+  Either way, the data set is still useful for study, such as this question.
+\end{sol}
+
+\question Download the \csv. For the description of each column,
+visit,
+
+\url{http://lib.stat.cmu.edu/datasets/boston}
+
+For this question, we will try to predict the ``Median value of
+owner-occupied homes in \$1000's.''
+\begin{enumerate}
+  \item Plot each column on $x$--axis against the last column on
+        $y$--axis. Label the axis and title the plots appropriately. Give
+        the two plots that you find the most linearly correlated. Which
+        columns are these plots graphing?
+
+        % solution goes here
+        
+  \item Using the two columns you picked above for $p=2$ and the
+        last column as labels, split the data into training and
+        testing sets. The test set should contain 100 records. Use the
+        remaining training set to calculate the vector $\beta$. With
+        this $\beta$ report the root mean squared error (RMSE) on the
+        100 records of the training set. Note that,
+        \[
+          \text{RMSE} = \sqrt{\paren{\frac{J(\beta)}{n}}}
+        \]
+        % solution goes here
+\end{enumerate}
+Don't use any loops for other than drawing plots in the first
+part. Put all the code relevant to this question in a file called
+\texttt{regression.py}.
+
+\section*{Submission Instructions}
+
+\begin{enumerate}
+  \item Submit a PDF that answers the questions and contains all the
+        plots that the assignment asks for.
+  \item Submit your \texttt{bestfit.py}.
+  \item Submit your \texttt{regression.py}.
+\end{enumerate}
+\end{document}
+
