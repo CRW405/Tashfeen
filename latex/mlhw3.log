@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.5)  4 FEB 2026 10:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.5)  9 FEB 2026 16:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -691,24 +691,19 @@ File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 [3{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}]
 
-[4] (./mlhw3.aux)
+[4]
+
+[5] (./mlhw3.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-Package rerunfilecheck Warning: File `mlhw3.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `mlhw3.out':
-(rerunfilecheck)             Before: 182368245502F3D75AFEC9CB8BEE7233;1535
-(rerunfilecheck)             After:  F7D92D0AFE2B6820B4F835333526B8F4;1535.
+Package rerunfilecheck Info: File `mlhw3.out' has not changed.
+(rerunfilecheck)             Checksum: F7D92D0AFE2B6820B4F835333526B8F4;1535.
  ) 
 Here is how much of TeX's memory you used:
- 20047 strings out of 474560
- 335744 string characters out of 5750495
+ 20048 strings out of 474560
+ 335750 string characters out of 5750495
  729174 words of memory out of 5000000
  42586 multiletter control sequences out of 15000+600000
  605851 words of font info for 78 fonts, out of 8000000 for 9000
@@ -725,10 +720,10 @@ fb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-di
 st/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/lm
 /lmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb>
-Output written on mlhw3.pdf (4 pages, 247854 bytes).
+Output written on mlhw3.pdf (5 pages, 248196 bytes).
 PDF statistics:
- 194 PDF objects out of 1000 (max. 8388607)
- 158 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
+ 198 PDF objects out of 1000 (max. 8388607)
+ 161 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 500000)
  89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
