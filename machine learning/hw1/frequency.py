@@ -3,12 +3,12 @@ from urllib.request import urlopen as get
 url = "https://www.gutenberg.org/files/20727/20727.txt"
 
 with get(url) as res:
-    text = res.read().decode("utf-8")
+    text = res.read().decode("utf-8").lower()
 
 # print(text)
 score = {}
 allWords = []
-for word in text.split(" "):
+for word in text.split():
     if len(word) > 5:
         if word not in score:
             score.update({word: 1})
