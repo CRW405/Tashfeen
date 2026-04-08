@@ -1,0 +1,141 @@
+\documentclass{homework}
+\author{Wiyninger, Caleb}
+\class{CSCI 3203: Tashfeen's Machine Learning I}
+\title{Homework 6}
+\address{
+  Computer Science,
+  Petree College of Arts \& Sciences,
+  Oklahoma City University
+}
+\date{\today}
+
+\newcommand\synthetic{%
+  \href{%
+    https://tashfeen.org/raw/share/ml/synthetic.py%
+  }{Download}%
+}
+\newcommand\sharepoint{%
+  \href{%
+    https://myokcuedu-my.sharepoint.com/:u:/g/personal/tashfeen_okcu_edu/EeqU1CH36W5Bp0YRgiRXxxUBuhzdI_JPec6CBlxsMBCtgA%
+  }{\texttt{t10k-images-idx3-byte}}%
+}
+\newcommand\webarchive{%
+  \href{%
+    https://web.archive.org/web/20170130040655/https://yann.lecun.com/exdb/mnist/%
+  }{the MNIST database of handwritten digits}%
+}
+\newcommand\linkedfile{%
+  \href{%
+    https://tashfeen.org/raw/share/ml/mnist.py%
+  }{linked file}%
+}
+
+\begin{document} \maketitle
+
+Let $x_{1}, \ldots, x_n$ be a set of instances in $\R^p$ and
+$c_1, \ldots, c_K$ be a set of $K$ cluster centroids. Note that $c_i$
+are also in $\R^p$. Let $\mathbb{I}_{ij} \in \{0, 1\}$ be a variable
+such that $\mathbb{I}_{ij} = 1$ if $x_i$ is assigned to cluster
+centred at $c_j$ and $\mathbb{I}_{ij} = 0$ otherwise. In layman's
+terms, $\mathbb{I}_{ij}$ indicates whether $x_i$ is in the
+$j^\text{th}$ cluster. The $K$--Means Clustering algorithm minimises
+the following objective function,
+\[
+  \sum_{i=1}^n \sum_{j=1}^K \mathbb{I}_{ij} [(x_i - c_j)^T(x_i - c_j)]
+\]
+
+This objective function is essentially a measure of how far are the
+members of each cluster from their respective centroids or means. The
+$K$--Means Clustering algorithm is given bellow,
+
+\begin{enumerate}
+  \item Initialise centroids or means $c_j$ for $1 \leq j \leq K$
+        randomly in $\R^p$ \ie $c_j \leftarrow x_j$.
+  \item Assign all $x_i$ to the closest centroid $c_u$. I. e., for
+        some $u$ and all $j$,
+        \[
+          \mathbf{if}\quad
+          [(x_i - c_u)^T(x_i - c_u)]<[(x_i - c_j)^T(x_i - c_j)]
+          \quad \mathbf{then}\quad
+          \mathbb{I}_{iu}\leftarrow 1
+        \]
+  \item Adjust the centroids or means according to the new
+        assignment in the last step,
+        \[
+          c_j \leftarrow \sum_{i=1}^{n}\mathbb{I}_{ij}\paren{\frac{x_i}{n}}
+        \]
+        Note that this is just assigning $c_j$ to the new mean of the
+        $j^\text{th}$ cluster.
+  \item Repeat from (2) till $c_j$ stop changing or the change
+        is less than some $\ep$.
+\end{enumerate}
+This algorithm is in section 6.12.1 of Mitchell or optionally
+algorithm 12.2 on page 523 of Hatie et al.
+
+\question Listing \ref{code} plots the clusters shown in figure
+\ref{clusters}. Give your best guesses for the optimal centroids
+$c_j\in \R^2$ and $K=4$.
+
+\begin{sol}
+    (3,3), (-3,3), (-3,-3), (3,-3)
+\end{sol}
+
+% \begin{figure}[htbp]
+%   \begin{tabular}{p{0.60\textwidth}p{0.35\textwidth}}
+%     \begin{minipage}{.60\textwidth}
+%       \lstinputlisting[
+%         language={Python},
+%         caption={Synthetic 2D clusters. \synthetic.},
+%         label=code]
+%       {./code/synthetic.py}
+%     \end{minipage}
+%      &
+%     \begin{minipage}{.35\textwidth}
+%       \centering
+%       \includegraphics[width=\linewidth]{./media/clusters}
+
+%       \caption{Clusters}
+%       \label{clusters}
+%     \end{minipage}
+%   \end{tabular}
+% \end{figure}
+
+\question Implement the $K$--Means Clustering algorithm for the data
+in listing \ref{code}. Run the algorithm for $K \in \{1, 2, 3, 4\}$
+and $\ep = 10^{-5}$. Give your final converged centroids plotted over
+the clustered data. Plot each cluster with a distinct
+colour\footnote{use different shades of grey if you have difficulty
+  seeing colour}. At the end you should have four converged (with
+different coloured clusters) plots for each value of $K$.
+
+
+\question\label{lnk} Download the file \sharepoint. This is the binary
+file containing 10,000 images of the test set from the
+\webarchive. You can refer to their website for more information about
+the data and its organisation. However, it is read and plotted for
+your inspection and further usage to implement the $K$--Means
+Clustering algorithm in the \linkedfile.
+
+\begin{enumerate}
+  \item Why do you think $K=10$ maybe a good choice for this data?
+  \item What are the values of $n$ and $p$?
+  \item What is represented by each of the $p$ features these data points?
+  \item For $\ep = 3.5$, finish implementing the $K$--Means Clustering
+        algorithm after the line indicated by the comment in the Python file
+        given in question \ref{lnk}. The file has code that (when completed)
+        should plot your 10 approximately converged cluster centroids as 28
+        by 28 pixel images comprising of 2 rows and 5 columns. Give and
+        discuss this plot. Why do you think the centroids $c_j$ look the way
+        they do?
+\end{enumerate}
+
+\section*{Submission Instructions}
+\begin{enumerate}
+  \item Submit a PDF that answers the questions and contains all the
+        plots that the assignment asks for.
+  \item Submit your \texttt{kmeans.py}. This is your $K$--Means
+        implementation for the code in listing \ref{code}.
+  \item Submit your \texttt{mnsit.py}. This is your $K$--Means
+        implementation for the MNSIT test set in question \ref{lnk}.
+\end{enumerate}
+\end{document}
