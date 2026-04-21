@@ -96,7 +96,7 @@ after setting it to zero?
 \end{align*}
 
 \begin{sol}
-  Because if $(X^T)^{-1}$ exists than your algorithm is too bad to bother with
+  Because if $(X^T)^{-1}$ exists then your algorithm is too bad to bother with
 \end{sol}
 
 \question Code listing \ref{line} generates and plots some linear
@@ -152,7 +152,23 @@ owner-occupied homes in \$1000's.''
         the two plots that you find the most linearly correlated. Which
         columns are these plots graphing?
 
-        % solution goes here
+        \begin{sol}
+          RM, LSTAT
+
+
+\begin{sol}
+  \begin{figure}
+    \includegraphics{../machine learning/ml4/rm.png}
+  \end{figure}
+\end{sol}
+
+
+\begin{sol}
+  \begin{figure}
+    \includegraphics{../machine learning/ml4/lstat.png}
+  \end{figure}
+\end{sol}
+        \end{sol}
         
   \item Using the two columns you picked above for $p=2$ and the
         last column as labels, split the data into training and
@@ -163,7 +179,9 @@ owner-occupied homes in \$1000's.''
         \[
           \text{RMSE} = \sqrt{\paren{\frac{J(\beta)}{n}}}
         \]
-        % solution goes here
+        \begin{sol}
+          5.987720202369889
+        \end{sol}
 \end{enumerate}
 Don't use any loops for other than drawing plots in the first
 part. Put all the code relevant to this question in a file called
