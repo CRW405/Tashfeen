@@ -1,0 +1,50 @@
+\documentclass{homework}
+\author{Wiyninger, Caleb}
+\class{CSCI 3203: Tashfeen's Machine Learning I}
+\title{Homework 7}
+\address{
+  Computer Science,
+  Petree College of Arts \& Sciences,
+  Oklahoma City University
+}
+\date{\today}
+\begin{document} \maketitle
+
+\begin{enumerate}
+
+\item
+\begin{sol}
+    since $b_{new}^l = b_{old}^l - n(\frac{\partial error}{\partial b_{old}^l})$
+    then $b^2$ must be the same dimension in order for the subtraction to work.
+    W follows the same rule, and the rule holds for all cases.
+\end{sol}
+
+\item
+\begin{sol}
+    $\frac{df_n}{df_{n-1}}\cdot\frac{df_{n-1}}{df_{n-2}}\cdot\frac{df_{n-2}}{df_{n-3}}\cdots\frac{df}{dx}$
+\end{sol}
+
+\item
+\begin{sol}
+    \begin{align*}
+        W^{(l+1)^\dagger}(\frac{\partial error}{\partial b^{(l+1)}})\circ\sigma `(z^l) \\
+        W^{(l+1)^\dagger}(W^{(l+2)^\dagger}(\frac{\partial error}{\partial b^{(l+2)}})\circ\sigma `(z^{l+1}))\circ\sigma `(z^l) \\
+        W^{(l+1)^\dagger}(W^{(l+2)^\dagger}(W^{(l+3)^\dagger}(\frac{\partial error}{\partial b^{(l+3)}})\circ\sigma `(z^{l+2}))\circ\sigma `(z^{l+1}))\circ\sigma `(z^l) \\
+        W^{(l+1)^\dagger}(W^{(l+2)^\dagger}(W^{(l+3)^\dagger}\cdots(W^{(l+n)^\dagger}(\frac{\partial error}{\partial b^{(l+n)}})\circ\sigma `(z^{l+(n-1)}))\cdots\circ\sigma `(z^{l+2}))\circ\sigma `(z^{l+1}))\circ\sigma `(z^l) \\
+        W^{(l+1)^\dagger}(W^{(l+2)^\dagger}(W^{(l+3)^\dagger}\cdots(W^{L^\dagger}(\frac{\partial error}{\partial b^{L}})\circ\sigma `(z^{L-1}))\cdots\circ\sigma `(z^{l+2}))\circ\sigma `(z^{l+1}))\circ\sigma `(z^l) \\
+        W^{(l+1)^\dagger}(W^{(l+2)^\dagger}(W^{(l+3)^\dagger}\cdots(W^{L^\dagger}(\frac{\partial error}{\partial a^{L}}\circ\frac{\partial a^L}{\partial z^{L}}\circ\frac{\partial z^L}{\partial b^{L}})\circ\sigma `(z^{L-1}))\cdots\circ\sigma `(z^{l+2}))\circ\sigma `(z^{l+1}))\circ\sigma `(z^l) \\
+        W^{(l+1)^\dagger}(W^{(l+2)^\dagger}(W^{(l+3)^\dagger}\cdots(W^{L^\dagger}(2(a^L-t)\circ\sigma `(z^L)\circ1)\circ\sigma `(z^{L-1}))\cdots\circ\sigma `(z^{l+2}))\circ\sigma `(z^{l+1}))\circ\sigma `(z^l) \\
+        W^{(l+1)^\dagger}(W^{(l+2)^\dagger}(W^{(l+3)^\dagger}\cdots(W^{L^\dagger}(2(a^L-t)\circ\sigma `(z^L))\circ\sigma `(z^{L-1}))\cdots\circ\sigma `(z^{l+2}))\circ\sigma `(z^{l+1}))\circ\sigma `(z^l) \\
+    \end{align*}
+\end{sol}
+
+\item
+\begin{sol}
+    1
+\end{sol}
+
+
+
+\end{enumerate}
+
+\end{document}
